@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>株式会社EM PLANNING｜営業戦略支援・営業代行</title>
+<title>株式会社EM PLANNING｜営業代行・営業戦略支援</title>
 
 <style>
 body {
@@ -12,25 +12,27 @@ body {
   color: #222;
 }
 
-/* ナビ */
+/* ===== ナビ ===== */
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 30px;
   align-items: center;
+  background: white;
 }
 
 .logo {
-  width: 100px;
+  width: 180px; /* ←大きくした */
 }
 
 nav a {
-  margin-left: 15px;
+  margin-left: 20px;
   text-decoration: none;
   color: #333;
+  font-weight: 500;
 }
 
-/* ヒーロー */
+/* ===== ヒーロー ===== */
 .hero {
   position: relative;
   text-align: center;
@@ -39,7 +41,7 @@ nav a {
 
 .hero img {
   width: 100%;
-  height: 400px;
+  height: 450px;
   object-fit: cover;
   filter: brightness(60%);
 }
@@ -52,7 +54,7 @@ nav a {
 }
 
 .hero h1 {
-  font-size: 32px;
+  font-size: 34px;
 }
 
 .btn {
@@ -65,10 +67,10 @@ nav a {
   border-radius: 6px;
 }
 
-/* セクション */
+/* ===== セクション ===== */
 .section {
   padding: 60px 20px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -77,7 +79,7 @@ nav a {
   padding-left: 10px;
 }
 
-/* カード */
+/* ===== カード ===== */
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -88,6 +90,11 @@ nav a {
   background: #f7f9fc;
   padding: 20px;
   border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* ←動き */
 }
 
 .card img {
@@ -95,7 +102,20 @@ nav a {
   border-radius: 6px;
 }
 
-/* CTA */
+/* ===== 実績 ===== */
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logos div {
+  background: #eee;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+/* ===== CTA ===== */
 .cta {
   background: #007bff;
   color: white;
@@ -111,12 +131,25 @@ nav a {
   text-decoration: none;
 }
 
-/* フッター */
+/* ===== フッター ===== */
 footer {
   background: #111;
   color: white;
   text-align: center;
   padding: 20px;
+}
+
+/* ===== LINE固定 ===== */
+.line-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #06C755;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
 }
 </style>
 </head>
@@ -154,7 +187,7 @@ footer {
     <div class="card">
       <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
       <h3>新規開拓</h3>
-      <p>テレアポ・メール営業代行</p>
+      <p>テレアポ・メール営業</p>
     </div>
 
     <div class="card">
@@ -166,7 +199,7 @@ footer {
     <div class="card">
       <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d">
       <h3>物流営業</h3>
-      <p>軽貨物・一般貨物の案件獲得</p>
+      <p>軽貨物・一般貨物対応</p>
     </div>
   </div>
 </section>
@@ -175,48 +208,48 @@ footer {
   <h2>強み</h2>
 
   <div class="cards">
-    <div class="card">
-      <h3>即日対応</h3>
-      <p>スピード営業で機会損失を防止</p>
-    </div>
+    <div class="card">即日対応</div>
+    <div class="card">営業実務経験</div>
+    <div class="card">関東対応</div>
+    <div class="card">成果重視</div>
+  </div>
+</section>
 
-    <div class="card">
-      <h3>実務経験ベース</h3>
-      <p>現場理解のある提案</p>
-    </div>
-
-    <div class="card">
-      <h3>関東エリア対応</h3>
-      <p>神奈川・東京中心に対応</p>
-    </div>
-
-    <div class="card">
-      <h3>成果重視</h3>
-      <p>結果に直結する営業支援</p>
-    </div>
+<section class="section">
+  <h2>実績・ネットワーク</h2>
+  <div class="logos">
+    <div>佐川急便</div>
+    <div>ヤマト運輸</div>
+    <div>アスクル</div>
+    <div>エディオン</div>
+    <div>大塚商会</div>
   </div>
 </section>
 
 <section class="section">
   <h2>料金</h2>
   <p>成果報酬：10〜20%</p>
-  <p>月額：20万〜50万</p>
+  <p>月額：20万〜50万円</p>
 </section>
 
 <section class="cta">
   <h2>まずは無料相談から</h2>
-  <a href="mailto:em.planning801@gmail.com">お問い合わせ</a>
+  <a href="mailto:em.planning801@gmail.com">メールで問い合わせ</a>
 </section>
 
 <section id="contact" class="section">
   <h2>お問い合わせ</h2>
   <p>メール：em.planning801@gmail.com</p>
   <p>電話：046-874-7258</p>
+  <p>携帯：080-5534-7560 ←追加済</p>
 </section>
 
 <footer>
   © EM PLANNING
 </footer>
+
+<!-- LINE固定ボタン -->
+<a href="#" class="line-btn">LINE相談</a>
 
 </body>
 </html>
