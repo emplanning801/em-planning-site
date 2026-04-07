@@ -1,1 +1,31 @@
-<html><head></head><body style="overflow-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;"><div>body {</div><div>&nbsp; font-family: sans-serif;</div><div>&nbsp; margin: 0;</div><div>}</div><div><br></div><div>header {</div><div>&nbsp; background: #002040;</div><div>&nbsp; color: white;</div><div>&nbsp; padding: 10px;</div><div>}</div><div><br></div><div>nav a {</div><div>&nbsp; color: white;</div><div>&nbsp; margin-right: 10px;</div><div>}</div><div><br></div><div>.hero {</div><div>&nbsp; padding: 40px;</div><div>&nbsp; text-align: center;</div><div>}</div><div><br></div><div>section {</div><div>&nbsp; padding: 20px;</div><div>}</div><div><br></div><div>footer {</div><div>&nbsp; background: #eee;</div><div>&nbsp; text-align: center;</div><div>&nbsp; padding: 10px;</div><div>}</div></body></html>
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+}
+
+.logo {
+  width: 120px;
+}
+
+.sub {
+  color: gray;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 0;
+}
+
+section {
+  margin-top: 40px;
+}
+
+h2 {
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+}
