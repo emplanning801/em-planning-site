@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EM PLANNING</title>
+<title>株式会社EM PLANNING｜営業戦略支援・営業代行</title>
 
 <style>
 body {
@@ -12,12 +12,12 @@ body {
   color: #222;
 }
 
-/* ヘッダー */
+/* ナビ */
 header {
-  padding: 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  padding: 20px;
+  align-items: center;
 }
 
 .logo {
@@ -28,23 +28,31 @@ nav a {
   margin-left: 15px;
   text-decoration: none;
   color: #333;
-  font-size: 14px;
 }
 
-/* ファーストビュー */
+/* ヒーロー */
 .hero {
-  padding: 80px 20px;
+  position: relative;
   text-align: center;
-  background: #f4f6f9;
+  color: white;
+}
+
+.hero img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .hero h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  color: #666;
+  font-size: 32px;
 }
 
 .btn {
@@ -52,9 +60,9 @@ nav a {
   margin-top: 20px;
   padding: 14px 28px;
   background: #007bff;
-  color: #fff;
-  border-radius: 6px;
+  color: white;
   text-decoration: none;
+  border-radius: 6px;
 }
 
 /* セクション */
@@ -65,8 +73,8 @@ nav a {
 }
 
 .section h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  border-left: 5px solid #007bff;
+  padding-left: 10px;
 }
 
 /* カード */
@@ -77,21 +85,26 @@ nav a {
 }
 
 .card {
+  background: #f7f9fc;
   padding: 20px;
   border-radius: 10px;
-  background: #f9f9f9;
 }
 
-/* フル幅CTA */
+.card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* CTA */
 .cta {
   background: #007bff;
-  color: #fff;
+  color: white;
   text-align: center;
   padding: 60px 20px;
 }
 
 .cta a {
-  background: #fff;
+  background: white;
   color: #007bff;
   padding: 12px 24px;
   border-radius: 6px;
@@ -101,7 +114,7 @@ nav a {
 /* フッター */
 footer {
   background: #111;
-  color: #fff;
+  color: white;
   text-align: center;
   padding: 20px;
 }
@@ -114,15 +127,18 @@ footer {
   <img src="logo-primary.jpg.JPG" class="logo">
   <nav>
     <a href="#service">サービス</a>
-    <a href="#price">料金</a>
-    <a href="#contact">お問い合わせ</a>
+    <a href="#strength">強み</a>
+    <a href="#contact">問い合わせ</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h1>営業・物流を一気通貫で支援</h1>
-  <p>戦略設計から案件獲得・運用まで対応</p>
-  <a href="#contact" class="btn">無料相談する</a>
+  <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72">
+  <div class="hero-content">
+    <h1>営業・物流を一気通貫で支援</h1>
+    <p>戦略から案件獲得まで全て対応</p>
+    <a href="#contact" class="btn">無料相談する</a>
+  </div>
 </section>
 
 <section id="service" class="section">
@@ -130,44 +146,58 @@ footer {
 
   <div class="cards">
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f">
       <h3>営業戦略設計</h3>
-      <p>市場分析から営業戦略を構築</p>
+      <p>市場分析から戦略構築まで対応</p>
     </div>
 
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
       <h3>新規開拓</h3>
       <p>テレアポ・メール営業代行</p>
     </div>
 
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
       <h3>商談対応</h3>
-      <p>クロージングまで対応</p>
+      <p>クロージングまで支援</p>
     </div>
 
     <div class="card">
-      <h3>物流案件獲得</h3>
-      <p>軽貨物・一般貨物の営業支援</p>
+      <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d">
+      <h3>物流営業</h3>
+      <p>軽貨物・一般貨物の案件獲得</p>
+    </div>
+  </div>
+</section>
+
+<section id="strength" class="section">
+  <h2>強み</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>即日対応</h3>
+      <p>スピード営業で機会損失を防止</p>
+    </div>
+
+    <div class="card">
+      <h3>実務経験ベース</h3>
+      <p>現場理解のある提案</p>
+    </div>
+
+    <div class="card">
+      <h3>関東エリア対応</h3>
+      <p>神奈川・東京中心に対応</p>
+    </div>
+
+    <div class="card">
+      <h3>成果重視</h3>
+      <p>結果に直結する営業支援</p>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <h2>強み</h2>
-
-  <div class="cards">
-    <div class="card">
-      <strong>即日対応</strong>
-      <p>スピード重視の営業</p>
-    </div>
-
-    <div class="card">
-      <strong>実務経験ベース</strong>
-      <p>現場理解のある提案</p>
-    </div>
-  </div>
-</section>
-
-<section id="price" class="section">
   <h2>料金</h2>
   <p>成果報酬：10〜20%</p>
   <p>月額：20万〜50万</p>
