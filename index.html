@@ -5,149 +5,280 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
 
-  <title>株式会社EM PLANNING｜営業代行・営業戦略支援（B2B）</title>
-  <meta name="description" content="営業戦略の設計から新規開拓、商談、クロージングまで一貫支援。B2B向け営業代行・営業コンサルティング。無料相談はLINE/電話/メールで受付中。" />
+  <title>株式会社EM PLANNING｜営業代行・営業戦略支援</title>
+  <meta name="description" content="営業戦略の設計から新規開拓、商談、クロージングまで一貫支援。B2B向け営業代行・営業戦略支援。" />
 
-  <!-- TODO: 公開URLに差し替え -->
-  <link rel="canonical" href="https://example.com/" />
-
-  <!-- OGP -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="株式会社EM PLANNING｜営業代行・営業戦略支援（B2B）" />
-  <meta property="og:description" content="戦略設計から新規開拓、商談、クロージングまで一貫支援。無料相談はLINE/電話/メールで受付中。" />
-  <meta property="og:url" content="https://example.com/" />
-  <meta property="og:image" content="https://example.com/assets/og-image.jpg" />
+  <meta property="og:title" content="株式会社EM PLANNING｜営業代行・営業戦略支援" />
+  <meta property="og:description" content="営業戦略の設計から新規開拓、商談、クロージングまで一貫支援。" />
+  <meta property="og:url" content="https://emplanning801.github.io/em-planning-site/" />
+  <meta property="og:image" content="https://emplanning801.github.io/em-planning-site/logo-primary.jpg.JPG" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="icon" href="assets/favicon.ico" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- =========================
-       コンセント（同意）前提の計測
-       1) まずデフォルトを denied
-       2) 同意後に granted へ update
-       ※ 設置方法・同意モードは公式手順に沿って実装すること
-       ========================= -->
-  <script>
-    window.__CONSENT__ = (function () {
-      try { return JSON.parse(localStorage.getItem("em_consent") || "null"); }
-      catch (e) { return null; }
-    })();
-  </script>
-
-  <!-- Google tag (gtag.js) : 同意モード用（IDは後で差し替え） -->
-  <script>
-    // TODO: GA4 Measurement ID（例: G-XXXXXXXXXX）に差し替え
-    window.__GA_ID__ = "G-XXXXXXXXXX";
-  </script>
-
-  <script>
-    // 同意モードのデフォルト（denied）
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-
-    gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'analytics_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied'
-    });
-
-    // ここで gtag.js を読み込む（同意モード advanced 想定）
-    (function(){
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(window.__GA_ID__);
-      document.head.appendChild(s);
-
-      gtag('js', new Date());
-      gtag('config', window.__GA_ID__, { 'anonymize_ip': true });
-    })();
-
-    // 既に同意済みなら update
-    if (window.__CONSENT__ && window.__CONSENT__.analytics === true) {
-      gtag('consent', 'update', { 'analytics_storage': 'granted' });
-    }
-  </script>
-
-  <!-- 構造化データ（Organization） -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "株式会社EM PLANNING",
-    "url": "https://example.com/",
-    "logo": "https://example.com/assets/logo-em-planning.png",
-    "email": "em.planning801@gmail.com",
-    "telephone": "+81-46-874-7258",
-    "address": {
-      "@type": "PostalAddress",
-      "postalCode": "237-0076",
-      "addressRegion": "神奈川県",
-      "addressLocality": "横須賀市",
-      "streetAddress": "船越町6-61-3",
-      "addressCountry": "JP"
-    },
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "contactType": "sales",
-      "telephone": "+81-46-874-7258",
-      "email": "em.planning801@gmail.com",
-      "availableLanguage": ["ja"]
-    }]
-  }
-  </script>
 </head>
-
 <body>
   <a class="skip-link" href="#main">本文へスキップ</a>
 
-  <header class="site-header" role="banner">
+  <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="ページ先頭へ">
-        <img
-          src="assets/logo-em-planning.png"
-          width="520"
-          height="300"
-          alt="株式会社EM PLANNINGのロゴ（上向き矢印）"
-          class="brand-logo"
-          decoding="async"
-        />
+      <a href="#top" class="brand" aria-label="ページ先頭へ">
+        <img src="logo-primary.jpg.JPG" alt="株式会社EM PLANNING ロゴ" class="brand-logo" />
       </a>
 
-      <nav class="top-nav" aria-label="主要ナビゲーション">
+      <nav class="top-nav" aria-label="主要メニュー">
         <a class="nav-pill" href="#service">サービス</a>
         <a class="nav-pill" href="#strength">強み</a>
+        <a class="nav-pill" href="#price">料金</a>
         <a class="nav-pill nav-cta" href="#contact">問い合わせ</a>
       </nav>
     </div>
   </header>
 
-  <main id="main" role="main">
-    <section id="top" class="hero" aria-labelledby="hero-title">
-      <div class="hero-bg" aria-hidden="true">
-        <img
-          src="assets/hero-sales.webp"
-          width="1920"
-          height="1080"
-          alt=""
-          class="hero-img"
-          decoding="async"
-          fetchpriority="high"
-        />
-      </div>
-
+  <main id="main">
+    <section id="top" class="hero">
+      <div class="hero-overlay"></div>
       <div class="container hero-inner">
-        <p class="hero-kicker">B2B向け｜営業代行・営業戦略支援</p>
-        <h1 id="hero-title" class="hero-title">営業を仕組み化し、売上を最大化する</h1>
+        <p class="hero-badge">B2B向け｜営業代行・営業戦略支援</p>
+        <h1 class="hero-title">営業を仕組み化し、<br>売上を最大化する</h1>
         <p class="hero-lead">
-          戦略設計から新規開拓、商談、クロージングまで一貫支援。<br />
-          成果につながる営業プロセスを、実務レベルで伴走します。
+          戦略設計から新規開拓、商談、クロージングまで一貫支援。<br>
+          実務レベルで伴走し、成果につながる営業活動を支えます。
         </p>
 
         <div class="hero-cta">
-          <a class="btn btn-line" href="https://line.me/ti/p/RzvX14AL9L" data-track="cta_line_hero" rel="noopener">LINEで無料相談</a>
-          <a class="btn btn-primary" href="tel:0468747258" data-track="cta_tel_hero">電話する</a>
-          <a class="btn btn-ghost" href="mailto:em.planning801@gmail.com?subject=【相談】営業代行・営業戦略について&body=会社名：%0D%0Aご担当者名：%0D%0Aご相談内容（簡単でOK）：%0D%0A" data-
+          <a class="btn btn-line" href="https://line.me/ti/p/RzvX14AL9L">LINEで無料相談</a>
+          <a class="btn btn-primary" href="tel:0468747258">電話で相談</a>
+          <a class="btn btn-ghost" href="mailto:em.planning801@gmail.com?subject=【相談】営業代行・営業戦略支援について">メールで相談</a>
+        </div>
+
+        <p class="hero-note">
+          まずは無料相談で、現状の課題整理から対応いたします。無理な営業は行いません。
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container narrow">
+        <div class="section-heading center">
+          <p class="eyebrow">ISSUES</p>
+          <h2>このようなお悩みに対応します</h2>
+        </div>
+
+        <div class="issue-grid">
+          <div class="issue-card">営業人材が不足している</div>
+          <div class="issue-card">新規顧客開拓が進まない</div>
+          <div class="issue-card">営業ノウハウが社内にない</div>
+          <div class="issue-card">営業活動に時間を割けない</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="service" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">SERVICE</p>
+          <h2>サービス内容</h2>
+          <p>設計だけで終わらず、実行まで支援する営業パートナーです。</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="service-card">
+            <div class="service-no">01</div>
+            <h3>営業戦略設計</h3>
+            <p>市場分析、ターゲット選定、営業導線の整理、提案方針の設計まで対応します。</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-no">02</div>
+            <h3>新規開拓支援</h3>
+            <p>営業リスト作成、メール営業、アプローチ設計など、新規開拓を実務レベルで支援します。</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-no">03</div>
+            <h3>商談・クロージング支援</h3>
+            <p>顧客課題の整理から提案、商談対応、契約成立に向けた実行支援まで一貫対応します。</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-no">04</div>
+            <h3>営業コンサルティング</h3>
+            <p>営業資料作成、営業教育、業務フロー改善など、継続的な営業体制づくりを支援します。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="strength" class="section section-dark">
+      <div class="container">
+        <div class="section-heading center light">
+          <p class="eyebrow">STRENGTH</p>
+          <h2>当社の強み</h2>
+          <p>机上の理論ではなく、現場理解に基づいた営業支援を重視しています。</p>
+        </div>
+
+        <div class="strength-grid">
+          <div class="strength-card">
+            <h3>戦略から実行まで一貫支援</h3>
+            <p>設計だけで終わらず、新規開拓、商談、クロージングまで伴走します。</p>
+          </div>
+          <div class="strength-card">
+            <h3>実務レベルの営業支援</h3>
+            <p>日々の営業活動に落とし込める、現実的で具体的な支援を行います。</p>
+          </div>
+          <div class="strength-card">
+            <h3>業界を問わず対応可能</h3>
+            <p>B2B領域を中心に、企業ごとの課題に応じて柔軟に支援します。</p>
+          </div>
+          <div class="strength-card">
+            <h3>継続案件化を意識した営業</h3>
+            <p>単発獲得ではなく、継続的な取引につながる営業導線を設計します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">ABOUT</p>
+          <h2>EM PLANNINGについて</h2>
+        </div>
+
+        <div class="about-box">
+          <p><strong>E = Eternal（永続的な）</strong></p>
+          <p><strong>M = Marketing（市場開拓）</strong></p>
+          <p><strong>PLANNING = 営業戦略支援</strong></p>
+          <p class="about-text">
+            営業は企業の成長を支える重要な活動です。<br>
+            「企業の成長ストーリーを共に創る営業パートナー」として、営業活動を支援し、市場開拓と売上拡大をサポートします。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="price" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">PRICE</p>
+          <h2>料金モデル</h2>
+          <p>ご相談内容・支援範囲・商材特性に応じてご提案します。</p>
+        </div>
+
+        <div class="price-grid">
+          <div class="price-card">
+            <h3>成果報酬型営業代行</h3>
+            <p class="price-main">売上の 10〜20%</p>
+            <p class="price-sub">例：売上100万円 → 報酬10〜20万円</p>
+          </div>
+
+          <div class="price-card">
+            <h3>月額営業代行</h3>
+            <p class="price-main">20万〜50万円 / 月</p>
+            <p class="price-sub">営業リスト・メール営業・アプローチ設計・商談設定など</p>
+          </div>
+
+          <div class="price-card">
+            <h3>営業コンサルティング</h3>
+            <p class="price-main">10万〜30万円 / 月</p>
+            <p class="price-sub">営業戦略、資料作成、教育、仕組み化支援</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="container cta-box">
+        <div>
+          <p class="eyebrow light">FREE CONSULTATION</p>
+          <h2>まずは無料相談から</h2>
+          <p>現状の営業課題をヒアリングし、最適な支援方法をご案内します。</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-line" href="https://line.me/ti/p/RzvX14AL9L">LINEで無料相談</a>
+          <a class="btn btn-primary" href="tel:0468747258">電話する</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container narrow">
+        <div class="section-heading center">
+          <p class="eyebrow">FAQ</p>
+          <h2>よくある質問</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>どの業界でも対応可能ですか？</summary>
+            <p>B2B領域を中心に、内容に応じて柔軟に対応しております。</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>初回相談に費用はかかりますか？</summary>
+            <p>初回相談は無料です。まずはお気軽にご相談ください。</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>営業代行とコンサルの違いは何ですか？</summary>
+            <p>営業代行は実務支援、コンサルは戦略設計や改善提案を中心とした支援です。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">CONTACT</p>
+          <h2>お問い合わせ</h2>
+          <p>LINE・お電話・メールにて受け付けております。</p>
+        </div>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="https://line.me/ti/p/RzvX14AL9L">
+            <span class="contact-label">LINE</span>
+            <strong>LINEで無料相談</strong>
+            <p>最短でやり取りしたい方はこちら</p>
+          </a>
+
+          <a class="contact-card" href="tel:0468747258">
+            <span class="contact-label">TEL</span>
+            <strong>046-874-7258</strong>
+            <p>固定電話</p>
+          </a>
+
+          <a class="contact-card" href="tel:08055347560">
+            <span class="contact-label">MOBILE</span>
+            <strong>080-5534-7560</strong>
+            <p>携帯電話</p>
+          </a>
+
+          <a class="contact-card" href="mailto:em.planning801@gmail.com?subject=【相談】営業代行・営業戦略支援について">
+            <span class="contact-label">MAIL</span>
+            <strong>em.planning801@gmail.com</strong>
+            <p>メールでのご相談</p>
+          </a>
+        </div>
+
+        <div class="company-box">
+          <h3>会社情報</h3>
+          <p>株式会社EM PLANNING</p>
+          <p>〒237-0076 神奈川県横須賀市船越町6-61-3</p>
+          <p>電話：046-874-7258 / 携帯：080-5534-7560</p>
+          <p>代表者：森慎二</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© EM PLANNING</p>
+    </div>
+  </footer>
+
+  <a href="https://line.me/ti/p/RzvX14AL9L" class="floating-line">LINEで無料相談</a>
+</body>
+</html>
