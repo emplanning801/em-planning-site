@@ -33,10 +33,10 @@
       --muted:#5b6472;
       --card:#ffffff;
       --line:#d9e1ea;
-      --shadow:0 10px 30px rgba(16,63,102,.08);
+      --shadow:0 12px 32px rgba(16,63,102,.08);
       --hero-shadow:0 20px 60px rgba(0,0,0,.18);
-      --radius:16px;
-      --max:1100px;
+      --radius:18px;
+      --max:1120px;
     }
 
     *{box-sizing:border-box}
@@ -46,11 +46,12 @@
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Hiragino Sans","Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
       color:var(--text);
       background:var(--bg);
-      line-height:1.75;
+      line-height:1.7;
     }
 
     img{max-width:100%;display:block}
     a{text-decoration:none;color:inherit}
+
     .container{
       width:min(var(--max), calc(100% - 32px));
       margin:0 auto;
@@ -82,19 +83,18 @@
     }
 
     .brand-logo{
-      width:58px;
-      height:58px;
+      width:56px;
+      height:56px;
       object-fit:contain;
       border-radius:10px;
       background:#fff;
-      flex:0 0 58px;
+      flex:0 0 56px;
     }
 
     .brand-text{
       display:flex;
       flex-direction:column;
       line-height:1.2;
-      min-width:0;
     }
 
     .brand-text strong{
@@ -127,17 +127,16 @@
     .nav a:hover{background:#eef4fa}
 
     .hero{
-      background:linear-gradient(135deg, rgba(11,47,76,.95), rgba(16,63,102,.86));
+      background:linear-gradient(135deg, rgba(11,47,76,.96), rgba(16,63,102,.88));
       color:#fff;
-      padding:78px 0 70px;
+      padding:72px 0 64px;
     }
 
     .hero-grid{
-      display:block;
-    }
-
-    .hero-copy{
-      max-width:780px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:32px;
+      align-items:center;
     }
 
     .eyebrow{
@@ -154,29 +153,28 @@
 
     .hero h1{
       margin:0 0 16px;
-      font-size:clamp(34px,5vw,58px);
-      line-height:1.18;
+      font-size:clamp(34px,5vw,56px);
+      line-height:1.15;
     }
 
     .hero .lead{
       margin:0 0 18px;
-      font-size:clamp(16px,2.1vw,20px);
+      font-size:18px;
       color:rgba(255,255,255,.94);
     }
 
-    .hero-sublead{
-      margin:0 0 22px;
-      font-size:18px;
-      color:rgba(255,255,255,.86);
+    .hero .sub{
+      margin:0 0 24px;
+      font-size:16px;
+      color:rgba(255,255,255,.84);
     }
 
     .hero-points{
-      margin:0 0 28px;
+      margin:0 0 26px;
       padding:0;
       list-style:none;
       display:grid;
       gap:10px;
-      max-width:760px;
     }
 
     .hero-points li{
@@ -238,7 +236,6 @@
     }
 
     .hero-visual{
-      margin-top:34px;
       border-radius:24px;
       overflow:hidden;
       box-shadow:var(--hero-shadow);
@@ -248,14 +245,14 @@
 
     .hero-visual img{
       width:100%;
-      aspect-ratio:16 / 9;
+      aspect-ratio:16 / 10;
       object-fit:cover;
     }
 
     section{padding:72px 0}
 
     .section-head{
-      max-width:800px;
+      max-width:760px;
       margin:0 auto 34px;
       text-align:center;
     }
@@ -273,54 +270,25 @@
       font-size:16px;
     }
 
-    .problem-list,
-    .target-list{
+    .cards-3{
       display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:16px;
-      margin-top:28px;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
     }
 
-    .problem,
-    .target{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:18px 16px;
-      text-align:center;
-      font-weight:700;
-      box-shadow:var(--shadow);
-    }
-
-    .problem strong,
-    .target strong{color:var(--navy)}
-
-    .compare{
+    .cards-2{
       display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:20px;
+      grid-template-columns:repeat(2,1fr);
+      gap:22px;
     }
 
     .card{
-      background:var(--card);
+      background:#fff;
       border:1px solid var(--line);
-      border-radius:var(--radius);
+      border-radius:18px;
       padding:24px;
       box-shadow:var(--shadow);
     }
-
-    .badge{
-      display:inline-block;
-      margin-bottom:10px;
-      padding:6px 10px;
-      border-radius:999px;
-      font-size:12px;
-      font-weight:800;
-      letter-spacing:.05em;
-    }
-
-    .badge-gray{background:#eef2f7; color:#475569}
-    .badge-green{background:#e7fbe7; color:#128312}
 
     .card h3{
       margin:0 0 10px;
@@ -331,6 +299,52 @@
     .card p{
       margin:0;
       color:var(--muted);
+    }
+
+    .problem{
+      text-align:center;
+      font-weight:700;
+    }
+
+    .problem strong{
+      display:block;
+      color:var(--navy);
+      margin-bottom:6px;
+    }
+
+    .image-band{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      align-items:center;
+    }
+
+    .image-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .image-card img{
+      width:100%;
+      aspect-ratio:16 / 10;
+      object-fit:cover;
+    }
+
+    .text-panel{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .text-panel h3{
+      margin:0 0 12px;
+      color:var(--navy);
+      font-size:28px;
     }
 
     .check-list{
@@ -363,82 +377,62 @@
       font-size:12px;
     }
 
-    .service-grid,
-    .price-grid,
-    .faq-grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:20px;
-    }
-
-    .service-no{
-      display:inline-flex;
-      width:34px;
-      height:34px;
-      align-items:center;
-      justify-content:center;
-      border-radius:999px;
-      background:#eaf1f8;
-      color:var(--navy);
-      font-weight:800;
-      margin-bottom:12px;
-    }
-
-    .price-card{
-      position:relative;
-    }
-
-    .price-label{
-      position:absolute;
-      top:18px;
-      right:18px;
-      background:#eaf1f8;
-      color:var(--navy);
-      padding:6px 10px;
-      border-radius:999px;
-      font-size:12px;
-      font-weight:800;
-    }
-
-    .price-card strong{
-      display:block;
-      font-size:30px;
-      color:var(--navy);
-      margin:6px 0 10px;
-    }
-
-    .price-note{
-      font-size:13px;
-      color:var(--muted);
-      margin-top:10px;
-    }
-
-    .trust-grid{
+    .price-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:20px;
     }
 
-    .trust-item{
+    .price-card{
+      position:relative;
       background:#fff;
       border:1px solid var(--line);
-      border-radius:16px;
-      padding:24px 20px;
+      border-radius:18px;
+      padding:26px 24px;
       box-shadow:var(--shadow);
-      text-align:center;
     }
 
-    .trust-item strong{
-      display:block;
-      font-size:32px;
-      line-height:1.1;
+    .price-tag{
+      position:absolute;
+      top:16px;
+      right:16px;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+      background:#eaf1f8;
       color:var(--navy);
-      margin-bottom:8px;
+    }
+
+    .price-card h3{
+      margin:0 0 8px;
+      font-size:22px;
+      color:var(--navy);
+    }
+
+    .price-main{
+      font-size:30px;
+      font-weight:800;
+      color:var(--navy);
+      line-height:1.2;
+      margin-bottom:10px;
+    }
+
+    .price-sub{
+      font-size:14px;
+      color:var(--muted);
+      margin-bottom:14px;
+    }
+
+    .price-note{
+      margin-top:12px;
+      font-size:13px;
+      color:var(--muted);
     }
 
     .message-grid{
       display:grid;
-      grid-template-columns:340px 1fr;
+      grid-template-columns:320px 1fr;
       gap:26px;
       align-items:start;
     }
@@ -477,38 +471,29 @@
       font-weight:700;
     }
 
-    .voice{
+    .faq-grid{
       display:grid;
       grid-template-columns:repeat(2,1fr);
       gap:20px;
     }
 
-    .quote{
+    .faq-item{
       background:#fff;
       border:1px solid var(--line);
-      border-radius:var(--radius);
+      border-radius:18px;
       padding:24px;
       box-shadow:var(--shadow);
     }
 
-    .quote p{
-      margin:0 0 14px;
-      color:var(--text);
-    }
-
-    .quote strong{
-      color:var(--navy);
-      font-size:14px;
-    }
-
     .faq-item h3{
       margin:0 0 10px;
-      font-size:18px;
       color:var(--navy);
+      font-size:18px;
     }
 
     .faq-item p{
       margin:0;
+      color:var(--muted);
     }
 
     .cta-section{
@@ -551,12 +536,7 @@
     .contact-note{
       margin-top:14px;
       font-size:13px;
-      color:rgba(255,255,255,.8);
-    }
-
-    .spacer-cta{
-      margin-top:26px;
-      text-align:center;
+      color:rgba(255,255,255,.82);
     }
 
     .footer{
@@ -567,19 +547,14 @@
     }
 
     @media (max-width: 960px){
-      .compare,
-      .service-grid,
+      .hero-grid,
+      .cards-3,
+      .cards-2,
+      .image-band,
       .price-grid,
-      .voice,
-      .faq-grid,
       .message-grid,
-      .trust-grid{
+      .faq-grid{
         grid-template-columns:1fr;
-      }
-
-      .problem-list,
-      .target-list{
-        grid-template-columns:1fr 1fr;
       }
 
       .header-inner{
@@ -596,16 +571,11 @@
 
     @media (max-width: 640px){
       section{padding:56px 0}
-      .problem-list,
-      .target-list{
-        grid-template-columns:1fr;
-      }
       .cta-row{flex-direction:column}
       .btn{width:100%}
-      .brand-logo{width:48px; height:48px}
+      .brand-logo{width:48px;height:48px}
       .brand-text strong{font-size:18px}
       .brand-text span{white-space:normal}
-      .hero-visual{margin-top:24px}
     }
   </style>
 </head>
@@ -622,11 +592,10 @@
       </a>
 
       <nav class="nav">
-        <a href="#target">対象企業</a>
         <a href="#problem">課題</a>
         <a href="#service">対応内容</a>
         <a href="#price">料金</a>
-        <a href="#message">代表</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">無料相談</a>
       </nav>
     </div>
@@ -635,13 +604,13 @@
   <main id="top">
     <section class="hero">
       <div class="container hero-grid">
-        <div class="hero-copy">
+        <div>
           <span class="eyebrow">B2B SALES SUPPORT</span>
           <h1>営業人材ゼロでも、<br>新規商談を増やす仕組みを構築。<br>東京・神奈川の法人向け営業代行</h1>
           <p class="lead">
             新規開拓が進まない。営業担当を採用しても定着しない。商談はあるのに受注に繋がらない。
           </p>
-          <p class="hero-sublead">
+          <p class="sub">
             株式会社EM PLANNINGは、営業戦略設計から新規開拓、商談、クロージングまで一貫支援し、売上に直結する営業体制を構築します。
           </p>
 
@@ -661,56 +630,12 @@
           </div>
 
           <div class="hero-note">
-            ※ 無理な営業は一切ありません<br>
-            ※ 相談のみでも歓迎です<br>
-            ※ 相場感の確認だけでも大丈夫です
+            ※ 無理な営業は一切ありません / 相談のみでも歓迎 / 相場感の確認だけでも大丈夫です
           </div>
         </div>
 
         <div class="hero-visual">
           <img src="sales.jpg.png" alt="営業商談イメージ">
-        </div>
-      </div>
-    </section>
-
-    <section id="target">
-      <div class="container">
-        <div class="section-head">
-          <h2>このような企業様におすすめです</h2>
-          <p>誰に依頼すべきか分からない段階でも、まずは現状整理から対応します。</p>
-        </div>
-
-        <div class="target-list">
-          <div class="target"><strong>営業専任不在</strong><br>営業担当がいない、または不足している</div>
-          <div class="target"><strong>新規開拓強化</strong><br>BtoB営業を伸ばしたい</div>
-          <div class="target"><strong>受注率改善</strong><br>商談はあるが受注しない</div>
-          <div class="target"><strong>営業の属人化</strong><br>仕組み化したい</div>
-          <div class="target"><strong>採用難</strong><br>営業人材が定着しない</div>
-          <div class="target"><strong>現場兼任</strong><br>営業に時間を割けない</div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <h2>実行だけでなく、設計から支援します</h2>
-          <p>営業代行で最も重要なのは、担当者を増やすことではなく、受注までの導線を整えることです。</p>
-        </div>
-
-        <div class="trust-grid">
-          <div class="trust-item">
-            <strong>17年以上</strong>
-            営業経験ベースで支援
-          </div>
-          <div class="trust-item">
-            <strong>BtoB特化</strong>
-            法人向け営業支援
-          </div>
-          <div class="trust-item">
-            <strong>一貫対応</strong>
-            戦略〜商談〜クロージング
-          </div>
         </div>
       </div>
     </section>
@@ -722,89 +647,30 @@
           <p>営業課題の多くは、担当者の努力不足ではなく、設計と導線の問題です。</p>
         </div>
 
-        <div class="problem-list">
-          <div class="problem"><strong>新規開拓</strong><br>営業先が増えない</div>
-          <div class="problem"><strong>営業人材</strong><br>採用しても定着しない</div>
-          <div class="problem"><strong>商談化</strong><br>アポはあるのに受注しない</div>
-          <div class="problem"><strong>提案力</strong><br>話は聞かれるが刺さらない</div>
-          <div class="problem"><strong>再現性</strong><br>属人化して仕組み化できない</div>
-          <div class="problem"><strong>時間不足</strong><br>現場と営業を両立できない</div>
-        </div>
-
-        <div class="spacer-cta">
-          <a class="btn btn-line"
-             href="https://line.me/ti/p/RzvX14AL9L"
-             onclick="trackAndOpenLine('課題セクションCTA','https://line.me/ti/p/RzvX14AL9L'); return false;">
-            まずは営業課題を無料相談する
-          </a>
+        <div class="cards-3">
+          <div class="card problem"><strong>新規開拓</strong>営業先が増えない</div>
+          <div class="card problem"><strong>営業人材</strong>採用しても定着しない</div>
+          <div class="card problem"><strong>商談化</strong>アポはあるのに受注しない</div>
         </div>
       </div>
     </section>
 
-    <section id="difference">
-      <div class="container">
-        <div class="section-head">
-          <h2>EM PLANNINGが選ばれる理由</h2>
-          <p>アポイント取得だけで終わらず、売上に繋がる営業支援を重視しています。</p>
+    <section>
+      <div class="container image-band">
+        <div class="image-card">
+          <img src="service-image.jpg" alt="営業支援イメージ">
         </div>
-
-        <div class="compare">
-          <div class="card">
-            <span class="badge badge-gray">一般的な営業代行</span>
-            <h3>アポ取得で止まりやすい</h3>
-            <ul class="check-list">
-              <li>商談以降は社内任せになりやすい</li>
-              <li>受注までの設計が弱い</li>
-              <li>成果が売上に直結しにくい</li>
-              <li>営業改善が残りにくい</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <span class="badge badge-green">EM PLANNING</span>
-            <h3>戦略から受注導線まで支援</h3>
-            <ul class="check-list">
-              <li>営業戦略設計から伴走</li>
-              <li>新規開拓・商談・提案まで対応</li>
-              <li>クロージングまで見据えた支援</li>
-              <li>継続的な営業体制づくりを重視</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="service">
-      <div class="container">
-        <div class="section-head">
-          <h2>対応内容</h2>
-          <p>単なる外注ではなく、実行まで支える営業パートナーとして動きます。</p>
-        </div>
-
-        <div class="service-grid">
-          <div class="card">
-            <span class="service-no">01</span>
-            <h3>営業戦略設計</h3>
-            <p>商材特性・ターゲット・営業導線を整理し、成果に繋がる営業設計を行います。</p>
-          </div>
-
-          <div class="card">
-            <span class="service-no">02</span>
-            <h3>新規開拓支援</h3>
-            <p>営業先の洗い出し、リスト設計、接触導線の構築まで実務ベースで支援します。</p>
-          </div>
-
-          <div class="card">
-            <span class="service-no">03</span>
-            <h3>商談支援</h3>
-            <p>ヒアリング整理、提案の組み立て、商談同席や進行改善まで対応します。</p>
-          </div>
-
-          <div class="card">
-            <span class="service-no">04</span>
-            <h3>クロージング支援</h3>
-            <p>受注率を上げるための提案整理、条件調整、最終クロージング導線まで支援します。</p>
-          </div>
+        <div class="text-panel">
+          <h3>対応内容</h3>
+          <ul class="check-list">
+            <li>営業戦略設計</li>
+            <li>新規開拓支援</li>
+            <li>商談支援</li>
+            <li>クロージング支援</li>
+          </ul>
+          <p style="margin-top:14px;color:var(--muted);">
+            単なるアポ取得ではなく、受注まで見据えた営業支援を行います。
+          </p>
         </div>
       </div>
     </section>
@@ -813,41 +679,92 @@
       <div class="container">
         <div class="section-head">
           <h2>料金プラン</h2>
-          <p>固定費のみではなく、成果に応じた形も含めて企業様ごとに最適な形をご提案します。</p>
+          <p>目的に応じて、固定費・成果報酬・ハイブリッドの3つの形でご提案します。</p>
         </div>
 
         <div class="price-grid">
-          <div class="card price-card">
-            <span class="price-label">入口プラン</span>
-            <h3>ライト</h3>
-            <strong>月額10万円〜</strong>
-            <p>営業相談・設計支援を中心に、現状整理と改善方針を明確化したい企業様向け。</p>
-            <div class="price-note">まずは相談したい、方向性を整理したい企業様向け</div>
+          <div class="price-card">
+            <span class="price-tag">安定型</span>
+            <h3>固定費プラン</h3>
+            <div class="price-main">月額30万円〜</div>
+            <div class="price-sub">
+              内部的な営業体制に深く入り込み、継続的に支援するプランです。
+            </div>
+            <ul class="check-list">
+              <li>営業を内製化しながら強化したい</li>
+              <li>営業担当の教育や仕組み化を進めたい</li>
+              <li>安定的に商談数を確保したい</li>
+            </ul>
           </div>
 
-          <div class="card price-card">
-            <span class="price-label">主力プラン</span>
-            <h3>スタンダード</h3>
-            <strong>月額30万円〜</strong>
-            <p>営業戦略設計に加え、新規開拓や商談支援まで含めた実行支援プラン。</p>
-            <div class="price-note">多くの企業様におすすめの中心プラン</div>
+          <div class="price-card">
+            <span class="price-tag">リスク最小</span>
+            <h3>成果報酬プラン</h3>
+            <div class="price-main">営業売上の10%〜</div>
+            <div class="price-sub">
+              初期コストを抑え、成果に応じて費用が発生するプランです。
+            </div>
+            <ul class="check-list">
+              <li>まずはリスクを抑えて試したい</li>
+              <li>営業代行の効果を見て判断したい</li>
+              <li>固定費をかけにくい</li>
+            </ul>
+            <div class="price-note">※ 内容や商材によってはお受けできない場合がございます</div>
           </div>
 
-          <div class="card price-card">
-            <span class="price-label">利益ゾーン</span>
-            <h3>プレミアム</h3>
-            <strong>月額50万円〜</strong>
-            <p>戦略設計から新規開拓、商談、クロージング支援まで深く伴走するフル支援プラン。</p>
-            <div class="price-note">営業を本気で立て直したい企業様向け</div>
+          <div class="price-card">
+            <span class="price-tag">最もおすすめ</span>
+            <h3>ハイブリッドプラン</h3>
+            <div class="price-main">月額20万円〜<br>＋ 営業売上の5%</div>
+            <div class="price-sub">
+              固定費と成果報酬を組み合わせた、最もバランスの良い営業支援プランです。
+            </div>
+            <ul class="check-list">
+              <li>営業をしっかり任せたい</li>
+              <li>成果にもコミットしてほしい</li>
+              <li>長期的に売上を伸ばしたい</li>
+            </ul>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="card">
-            <h3>補足</h3>
-            <p>
-              料金は、業種・商材・営業フェーズ・求める支援範囲に応じて変動します。<br>
-              まずは無料相談にて、現状と課題を整理した上で最適な形をご提案します。
-            </p>
-          </div>
+    <section>
+      <div class="container image-band">
+        <div class="text-panel">
+          <h3>相談しやすさも重視しています</h3>
+          <p style="margin:0 0 12px;color:var(--muted);">
+            まだ依頼するか決まっていない段階でも問題ありません。まずは現状整理だけでも歓迎です。
+          </p>
+          <ul class="check-list">
+            <li>無理な営業は一切ありません</li>
+            <li>相場感の確認だけでも可能です</li>
+            <li>現状の課題整理から対応します</li>
+          </ul>
+        </div>
+        <div class="image-card">
+          <img src="consultation-image.jpg" alt="相談イメージ">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container cards-2">
+        <div class="card">
+          <h3>選ばれる理由</h3>
+          <ul class="check-list">
+            <li>営業設計から実行まで一気通貫</li>
+            <li>アポだけで終わらない受注設計</li>
+            <li>現場経験ベースの実行力</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>こんな企業様におすすめ</h3>
+          <ul class="check-list">
+            <li>営業専任担当がいない、または不足している</li>
+            <li>新規開拓を強化したいBtoB企業</li>
+            <li>商談はあるが受注率に課題がある</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -856,7 +773,7 @@
       <div class="container">
         <div class="section-head">
           <h2>代表メッセージ</h2>
-          <p>営業は属人的に頑張るだけではなく、仕組み化と導線設計で再現性を高めるべきだと考えています。</p>
+          <p>営業は担当者の気合いだけではなく、仕組みで再現性を高めるべきだと考えています。</p>
         </div>
 
         <div class="message-grid">
@@ -873,58 +790,32 @@
             <p>
               当社は、単なるアポイント取得代行ではありません。戦略設計から新規開拓、商談、提案、クロージングまで一貫して支援し、売上に直結する営業体制の構築をサポートします。
             </p>
-            <p>
-              アポだけで終わらない営業を実現し、継続的な成果に繋がる仕組みを一緒に作っていきます。
-            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <h2>お客様の声</h2>
-          <p>受注導線まで見据えた支援が評価されています。</p>
-        </div>
-
-        <div class="voice">
-          <div class="quote">
-            <p>営業体制が整理され、商談数が安定してきました。単なるアポ取得ではなく、受注まで見据えた支援が非常に助かっています。</p>
-            <strong>法人営業支援 / 物流関連企業様</strong>
-          </div>
-          <div class="quote">
-            <p>営業リソース不足に悩んでいましたが、外部パートナーとして機能してもらえたことで、社内の営業負荷を大きく軽減できました。</p>
-            <strong>営業改善支援 / BtoBサービス企業様</strong>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
+    <section id="faq">
       <div class="container">
         <div class="section-head">
           <h2>よくある質問</h2>
-          <p>相談前に不安を感じやすいポイントを先にまとめました。</p>
+          <p>相談前に感じやすい不安を先に解消します。</p>
         </div>
 
         <div class="faq-grid">
-          <div class="card faq-item">
+          <div class="faq-item">
             <h3>まだ依頼するか決まっていませんが相談して大丈夫ですか？</h3>
             <p>はい、相談のみでも問題ありません。現状整理だけでも歓迎です。</p>
           </div>
-
-          <div class="card faq-item">
+          <div class="faq-item">
             <h3>どの段階から依頼できますか？</h3>
             <p>営業戦略の整理段階からでも対応可能です。商談改善だけのご相談も可能です。</p>
           </div>
-
-          <div class="card faq-item">
+          <div class="faq-item">
             <h3>東京・神奈川以外も相談できますか？</h3>
             <p>内容に応じてご相談可能です。まずはお気軽にお問い合わせください。</p>
           </div>
-
-          <div class="card faq-item">
+          <div class="faq-item">
             <h3>いきなり契約を迫られることはありませんか？</h3>
             <p>ありません。無理な営業は一切行いません。必要性が合う場合のみご提案します。</p>
           </div>
@@ -963,7 +854,7 @@
           </div>
 
           <div class="contact-note">
-            受付目安：平日対応 / 相談のみでも可 / 営業の押し売りは一切ありません
+            ※ 相談のみでも歓迎 / 相場感の確認だけでも可 / 無理な営業は一切ありません
           </div>
         </div>
       </div>
