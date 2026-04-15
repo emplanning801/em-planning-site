@@ -11,9 +11,9 @@
   <meta property="og:description" content="営業戦略設計から新規開拓、商談、クロージングまで一貫支援。売上に直結する営業体制を構築します。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://emplanning801.github.io/em-planning-site/" />
+  <meta property="og:image" content="https://emplanning801.github.io/em-planning-site/6121384E-BBB0-4C3C-8516-99A8DD00F273.jpeg" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XC567Z2G7X"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -33,12 +33,10 @@
       --muted:#5b6472;
       --card:#ffffff;
       --line:#d9e1ea;
-      --accent:#f59e0b;
       --shadow:0 10px 30px rgba(16,63,102,.08);
       --radius:16px;
       --max:1100px;
     }
-
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
@@ -48,49 +46,62 @@
       background:var(--bg);
       line-height:1.75;
     }
-
-    a{color:inherit}
     img{max-width:100%;display:block}
-
+    a{color:inherit}
     .container{
       width:min(var(--max), calc(100% - 32px));
       margin:0 auto;
     }
-
     .header{
       position:sticky;
       top:0;
       z-index:100;
-      background:rgba(255,255,255,.92);
+      background:rgba(255,255,255,.94);
       backdrop-filter:blur(10px);
       border-bottom:1px solid rgba(217,225,234,.9);
     }
-
     .header-inner{
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:20px;
-      min-height:72px;
+      min-height:76px;
+      padding:10px 0;
     }
-
     .brand{
-      font-weight:800;
-      font-size:20px;
-      color:var(--navy);
+      display:flex;
+      align-items:center;
+      gap:12px;
       text-decoration:none;
-      letter-spacing:.02em;
+      min-width:0;
+    }
+    .brand-logo{
+      width:58px;
+      height:58px;
+      object-fit:contain;
+      border-radius:10px;
+      background:#fff;
+    }
+    .brand-text{
+      display:flex;
+      flex-direction:column;
+      line-height:1.2;
+    }
+    .brand-text strong{
+      color:var(--navy);
+      font-size:20px;
       white-space:nowrap;
     }
-
+    .brand-text span{
+      color:var(--muted);
+      font-size:12px;
+    }
     .nav{
       display:flex;
-      gap:12px;
-      align-items:center;
       flex-wrap:wrap;
+      gap:10px;
       justify-content:flex-end;
     }
-
     .nav a{
       text-decoration:none;
       color:var(--navy);
@@ -99,28 +110,19 @@
       padding:10px 14px;
       border-radius:999px;
     }
-
-    .nav a:hover{
-      background:#eef4fa;
-    }
+    .nav a:hover{background:#eef4fa}
 
     .hero{
-      background:
-        linear-gradient(135deg, rgba(11,47,76,.92), rgba(16,63,102,.84)),
-        radial-gradient(circle at top right, rgba(255,255,255,.08), transparent 30%);
+      background:linear-gradient(135deg, rgba(11,47,76,.95), rgba(16,63,102,.86));
       color:#fff;
-      padding:82px 0 72px;
-      position:relative;
-      overflow:hidden;
+      padding:78px 0 70px;
     }
-
     .hero-grid{
       display:grid;
-      grid-template-columns:1.15fr .85fr;
-      gap:36px;
+      grid-template-columns:1.1fr .9fr;
+      gap:34px;
       align-items:center;
     }
-
     .eyebrow{
       display:inline-block;
       margin-bottom:14px;
@@ -132,20 +134,16 @@
       font-weight:800;
       letter-spacing:.08em;
     }
-
     .hero h1{
       margin:0 0 16px;
-      font-size:clamp(34px, 5vw, 58px);
+      font-size:clamp(34px, 5vw, 56px);
       line-height:1.18;
-      letter-spacing:.01em;
     }
-
     .hero .lead{
       margin:0 0 22px;
       font-size:clamp(16px, 2.1vw, 19px);
       color:rgba(255,255,255,.92);
     }
-
     .hero-points{
       margin:0 0 28px;
       padding:0;
@@ -153,177 +151,113 @@
       display:grid;
       gap:10px;
     }
-
     .hero-points li{
       display:flex;
-      align-items:flex-start;
       gap:10px;
-      color:rgba(255,255,255,.95);
       font-weight:600;
+      color:rgba(255,255,255,.95);
     }
-
     .hero-points li::before{
       content:"✓";
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
       width:22px;
       height:22px;
-      margin-top:2px;
       flex:0 0 22px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
       border-radius:999px;
       background:rgba(255,255,255,.16);
-      font-size:14px;
+      font-size:12px;
+      margin-top:2px;
     }
-
     .cta-row{
       display:flex;
       flex-wrap:wrap;
       gap:14px;
       margin-bottom:14px;
     }
-
     .btn{
       display:inline-flex;
       justify-content:center;
       align-items:center;
-      gap:8px;
       min-height:54px;
       padding:0 22px;
       border-radius:12px;
       text-decoration:none;
       font-weight:800;
-      letter-spacing:.01em;
-      transition:.2s ease;
-      border:none;
-      cursor:pointer;
       box-shadow:var(--shadow);
+      transition:.2s ease;
     }
-
-    .btn-line{
-      background:var(--green);
-      color:#fff;
-    }
-
-    .btn-line:hover{background:var(--green-dark); transform:translateY(-1px)}
-    .btn-primary{
-      background:#fff;
-      color:var(--navy);
-    }
-    .btn-primary:hover{transform:translateY(-1px)}
-    .btn-outline{
-      background:transparent;
-      color:#fff;
-      border:1px solid rgba(255,255,255,.28);
-      box-shadow:none;
-    }
-    .btn-outline:hover{background:rgba(255,255,255,.08)}
-
+    .btn:hover{transform:translateY(-1px)}
+    .btn-line{background:var(--green);color:#fff}
+    .btn-line:hover{background:var(--green-dark)}
+    .btn-primary{background:#fff;color:var(--navy)}
+    .btn-outline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.24);box-shadow:none}
     .hero-note{
       font-size:13px;
       color:rgba(255,255,255,.78);
     }
 
-    .hero-card{
+    .hero-profile{
       background:rgba(255,255,255,.1);
       border:1px solid rgba(255,255,255,.12);
       border-radius:22px;
       padding:24px;
       box-shadow:0 20px 60px rgba(0,0,0,.14);
     }
-
-    .hero-card h2{
-      margin:0 0 12px;
-      font-size:22px;
+    .profile-photo{
+      width:100%;
+      max-width:320px;
+      margin:0 auto 18px;
+      border-radius:20px;
+      overflow:hidden;
+      background:#fff;
+    }
+    .profile-photo img{
+      width:100%;
+      aspect-ratio: 4 / 5;
+      object-fit:cover;
+    }
+    .hero-profile h2{
+      margin:0 0 6px;
+      font-size:24px;
+      text-align:center;
+    }
+    .hero-profile .role{
+      text-align:center;
+      color:rgba(255,255,255,.82);
+      font-size:14px;
+      margin-bottom:14px;
+    }
+    .hero-profile p{
+      margin:0;
+      color:rgba(255,255,255,.94);
+      font-size:15px;
     }
 
-    .hero-card .mini{
-      color:rgba(255,255,255,.86);
-      margin-bottom:16px;
-    }
-
-    .hero-stats{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:14px;
-    }
-
-    .stat{
-      background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.1);
-      border-radius:16px;
-      padding:16px;
-    }
-
-    .stat strong{
-      display:block;
-      font-size:26px;
-      line-height:1.1;
-      margin-bottom:4px;
-    }
-
-    section{
-      padding:72px 0;
-    }
-
+    section{padding:72px 0}
     .section-head{
       max-width:760px;
       margin:0 auto 34px;
       text-align:center;
     }
-
     .section-head h2{
       margin:0 0 10px;
-      font-size:clamp(28px, 4vw, 40px);
+      font-size:clamp(28px,4vw,40px);
       color:var(--navy);
       line-height:1.25;
     }
-
     .section-head p{
       margin:0;
       color:var(--muted);
       font-size:16px;
     }
-
-    .cards-3{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:20px;
-    }
-
-    .cards-2{
-      display:grid;
-      grid-template-columns:repeat(2, 1fr);
-      gap:20px;
-    }
-
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:24px;
-      box-shadow:var(--shadow);
-    }
-
-    .card h3{
-      margin:0 0 10px;
-      color:var(--navy);
-      font-size:22px;
-    }
-
-    .card p{
-      margin:0;
-      color:var(--muted);
-      padding:0;
-    }
-
     .problem-list{
       display:grid;
       grid-template-columns:repeat(3, 1fr);
       gap:16px;
       margin-top:28px;
     }
-
     .problem{
       background:#fff;
       border:1px solid var(--line);
@@ -333,21 +267,20 @@
       font-weight:700;
       box-shadow:var(--shadow);
     }
-
-    .problem strong{
-      color:var(--navy);
-    }
+    .problem strong{color:var(--navy)}
 
     .compare{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:20px;
     }
-
-    .compare .card{
-      height:100%;
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
     }
-
     .badge{
       display:inline-block;
       margin-bottom:10px;
@@ -357,17 +290,13 @@
       font-weight:800;
       letter-spacing:.05em;
     }
-
-    .badge-gray{
-      background:#eef2f7;
-      color:#475569;
+    .badge-gray{background:#eef2f7;color:#475569}
+    .badge-green{background:#e7fbe7;color:#128312}
+    .card h3{
+      margin:0 0 10px;
+      color:var(--navy);
+      font-size:22px;
     }
-
-    .badge-green{
-      background:#e7fbe7;
-      color:#128312;
-    }
-
     .check-list{
       list-style:none;
       margin:0;
@@ -375,84 +304,83 @@
       display:grid;
       gap:10px;
     }
-
     .check-list li{
-      padding-left:28px;
       position:relative;
-      color:var(--text);
+      padding-left:28px;
       font-weight:600;
     }
-
     .check-list li::before{
       content:"✓";
       position:absolute;
-      left:0;
-      top:0;
-      width:20px;
-      height:20px;
-      border-radius:999px;
-      background:#eaf7ee;
-      color:#15803d;
+      left:0; top:0;
+      width:20px; height:20px;
       display:flex;
       align-items:center;
       justify-content:center;
+      border-radius:999px;
+      background:#eaf7ee;
+      color:#15803d;
       font-size:12px;
     }
 
     .service-grid{
       display:grid;
-      grid-template-columns:repeat(2, 1fr);
+      grid-template-columns:repeat(2,1fr);
       gap:20px;
     }
-
     .service-no{
       display:inline-flex;
-      width:34px;
-      height:34px;
-      border-radius:999px;
+      width:34px; height:34px;
       align-items:center;
       justify-content:center;
+      border-radius:999px;
       background:#eaf1f8;
       color:var(--navy);
       font-weight:800;
       margin-bottom:12px;
     }
 
-    .flow{
+    .message-grid{
       display:grid;
-      grid-template-columns:repeat(4, 1fr);
-      gap:16px;
+      grid-template-columns:340px 1fr;
+      gap:26px;
+      align-items:start;
     }
-
-    .flow-step{
+    .message-photo{
       background:#fff;
       border:1px solid var(--line);
-      border-radius:16px;
-      padding:22px 18px;
-      text-align:center;
+      border-radius:20px;
+      overflow:hidden;
       box-shadow:var(--shadow);
     }
-
-    .flow-step strong{
-      display:block;
-      margin-bottom:8px;
-      color:var(--navy);
-      font-size:18px;
+    .message-photo img{
+      width:100%;
+      aspect-ratio:4 / 5;
+      object-fit:cover;
     }
-
-    .flow-step p{
-      margin:0;
-      padding:0;
+    .message-body{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+    .message-body h3{
+      margin:0 0 6px;
+      color:var(--navy);
+      font-size:28px;
+    }
+    .message-body .role{
+      margin:0 0 16px;
       color:var(--muted);
-      font-size:14px;
+      font-weight:700;
     }
 
     .voice{
       display:grid;
-      grid-template-columns:repeat(2, 1fr);
+      grid-template-columns:repeat(2,1fr);
       gap:20px;
     }
-
     .quote{
       background:#fff;
       border:1px solid var(--line);
@@ -460,23 +388,13 @@
       padding:24px;
       box-shadow:var(--shadow);
     }
-
-    .quote p{
-      margin:0 0 14px;
-      padding:0;
-      color:var(--text);
-    }
-
-    .quote strong{
-      color:var(--navy);
-      font-size:14px;
-    }
+    .quote p{margin:0 0 14px;color:var(--text)}
+    .quote strong{color:var(--navy);font-size:14px}
 
     .cta-section{
       background:linear-gradient(135deg, var(--navy-deep), var(--navy));
       color:#fff;
     }
-
     .cta-box{
       max-width:900px;
       margin:0 auto;
@@ -486,19 +404,15 @@
       border-radius:24px;
       padding:36px 24px;
     }
-
     .cta-box h2{
       margin:0 0 12px;
       font-size:clamp(28px,4vw,40px);
     }
-
     .cta-box p{
       margin:0 auto 20px;
       max-width:700px;
-      padding:0;
       color:rgba(255,255,255,.92);
     }
-
     .cta-sub{
       display:inline-block;
       padding:8px 12px;
@@ -509,20 +423,17 @@
       font-weight:700;
       margin-bottom:12px;
     }
-
     .contact-note{
       margin-top:14px;
       font-size:13px;
       color:rgba(255,255,255,.8);
     }
-
     .footer{
       padding:28px 0 50px;
       text-align:center;
       color:var(--muted);
       font-size:14px;
     }
-
     .spacer-cta{
       margin-top:26px;
       text-align:center;
@@ -530,55 +441,30 @@
 
     @media (max-width: 960px){
       .hero-grid,
-      .cards-3,
-      .cards-2,
       .compare,
       .service-grid,
-      .voice{
+      .voice,
+      .message-grid{
         grid-template-columns:1fr;
       }
-
       .problem-list{
         grid-template-columns:1fr 1fr;
       }
-
-      .flow{
-        grid-template-columns:1fr 1fr;
-      }
-
       .header-inner{
+        flex-direction:column;
         align-items:flex-start;
         padding:14px 0;
-        flex-direction:column;
       }
-
-      .nav{
-        width:100%;
-        justify-content:flex-start;
-      }
+      .nav{width:100%;justify-content:flex-start}
     }
 
     @media (max-width: 640px){
-      .hero{
-        padding:64px 0 54px;
-      }
-
-      section{
-        padding:56px 0;
-      }
-
-      .problem-list,
-      .flow{
-        grid-template-columns:1fr;
-      }
-
-      .btn{
-        width:100%;
-      }
-
-      .cta-row{
-        flex-direction:column;
-      }
+      section{padding:56px 0}
+      .problem-list{grid-template-columns:1fr}
+      .cta-row{flex-direction:column}
+      .btn{width:100%}
+      .brand-logo{width:48px;height:48px}
+      .brand-text strong{font-size:18px}
     }
   </style>
 </head>
@@ -586,12 +472,19 @@
 <body>
   <header class="header">
     <div class="container header-inner">
-      <a href="#top" class="brand">EM PLANNING</a>
+      <a href="#top" class="brand">
+        <img class="brand-logo" src="6121384E-BBB0-4C3C-8516-99A8DD00F273.jpeg" alt="EM PLANNING ロゴ">
+        <span class="brand-text">
+          <strong>EM PLANNING</strong>
+          <span>企業の成長ストーリーを共に創る</span>
+        </span>
+      </a>
+
       <nav class="nav">
         <a href="#problem">課題</a>
         <a href="#service">対応内容</a>
         <a href="#difference">選ばれる理由</a>
-        <a href="#flow">導入の流れ</a>
+        <a href="#message">代表</a>
         <a href="#contact">無料相談</a>
       </nav>
     </div>
@@ -604,7 +497,7 @@
           <span class="eyebrow">B2B SALES SUPPORT</span>
           <h1>法人向け営業代行<br>東京・神奈川で<br>売上を最大化する</h1>
           <p class="lead">
-            新規開拓が進まない、営業人材が足りない、商談はあるのに受注に繋がらない。<br>
+            新規開拓が進まない。営業人材が足りない。商談はあるのに受注に繋がらない。<br>
             株式会社EM PLANNINGは、営業戦略設計から新規開拓、商談、クロージングまで一貫支援します。
           </p>
 
@@ -626,28 +519,16 @@
           <div class="hero-note">※営業代行の相場相談だけでも歓迎です</div>
         </div>
 
-        <div class="hero-card">
-          <h2>こんな企業様におすすめ</h2>
-          <p class="mini">売上に直結する営業体制を、外部パートナーとして構築します。</p>
-
-          <div class="hero-stats">
-            <div class="stat">
-              <strong>新規開拓</strong>
-              <span>営業先リスト・アプローチ設計</span>
-            </div>
-            <div class="stat">
-              <strong>商談支援</strong>
-              <span>提案整理・受注導線の強化</span>
-            </div>
-            <div class="stat">
-              <strong>営業改善</strong>
-              <span>属人化しない仕組みづくり</span>
-            </div>
-            <div class="stat">
-              <strong>継続伴走</strong>
-              <span>単発で終わらない支援体制</span>
-            </div>
+        <div class="hero-profile">
+          <div class="profile-photo">
+            <img src="A9B4604D-53DB-4E1B-BE26-2A380F392BAC.jpeg" alt="代表写真">
           </div>
+          <h2>森 慎二</h2>
+          <div class="role">代表 / 営業支援パートナー</div>
+          <p>
+            現場経験に基づく営業支援を重視し、アポイント取得だけで終わらない、
+            売上に繋がる営業導線づくりをサポートします。
+          </p>
         </div>
       </div>
     </section>
@@ -746,29 +627,33 @@
       </div>
     </section>
 
-    <section id="flow">
+    <section id="message">
       <div class="container">
         <div class="section-head">
-          <h2>導入の流れ</h2>
-          <p>初回相談から実行開始まで、スムーズに進められる形にしています。</p>
+          <h2>代表メッセージ</h2>
+          <p>営業は属人的に頑張るだけではなく、仕組み化と導線設計で再現性を高めるべきだと考えています。</p>
         </div>
 
-        <div class="flow">
-          <div class="flow-step">
-            <strong>1. 無料相談</strong>
-            <p>現状の営業課題をヒアリングします。</p>
+        <div class="message-grid">
+          <div class="message-photo">
+            <img src="A9B4604D-53DB-4E1B-BE26-2A380F392BAC.jpeg" alt="代表 森慎二">
           </div>
-          <div class="flow-step">
-            <strong>2. 現状整理</strong>
-            <p>課題・優先順位・打ち手を明確化します。</p>
-          </div>
-          <div class="flow-step">
-            <strong>3. 提案</strong>
-            <p>最適な支援内容と進め方を提案します。</p>
-          </div>
-          <div class="flow-step">
-            <strong>4. 支援開始</strong>
-            <p>戦略設計から実行まで伴走します。</p>
+
+          <div class="message-body">
+            <h3>森 慎二</h3>
+            <p class="role">株式会社EM PLANNING 代表</p>
+            <p>
+              多くの企業様が営業課題を抱えていますが、本質は「担当者の頑張り」だけではなく、
+              受注までを見据えた営業導線と実行体制にあります。
+            </p>
+            <p>
+              当社は、単なるアポイント取得代行ではありません。
+              戦略設計から新規開拓、商談、提案、クロージングまで一貫して支援し、
+              売上に直結する営業体制の構築をサポートします。
+            </p>
+            <p>
+              アポだけで終わらない営業を実現し、継続的な成果に繋がる仕組みを一緒に作っていきます。
+            </p>
           </div>
         </div>
       </div>
@@ -847,7 +732,6 @@
           transport_type: 'beacon'
         });
       } catch (e) {}
-
       setTimeout(function() {
         window.open(url, '_blank');
       }, 200);
