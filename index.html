@@ -1,73 +1,7 @@
-<!doctype html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-  <title>法人向け営業代行｜株式会社EM PLANNING</title>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XC567Z2G7X"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XC567Z2G7X');
-  </script>
-</head>
-
-<body>
-
-<h1>法人向け営業代行（東京・神奈川）</h1>
-
-<p>営業戦略から新規開拓、商談、クロージングまで一貫支援します。</p>
-
-<!-- LINE CTA① -->
-<a href="https://line.me/ti/p/RzvX14AL9L"
-   target="_blank"
-   onclick="trackAndOpenLine('ファーストビュー','https://line.me/ti/p/RzvX14AL9L'); return false;">
-LINEで無料相談（ファーストビュー）
-</a>
-
-<br><br>
-
-<!-- LINE CTA② -->
-<a href="https://line.me/ti/p/RzvX14AL9L"
-   target="_blank"
-   onclick="trackAndOpenLine('中段CTA','https://line.me/ti/p/RzvX14AL9L'); return false;">
-LINEで無料相談（中段）
-</a>
-
-<br><br>
-
-<!-- LINE CTA③ -->
-<a href="https://line.me/ti/p/RzvX14AL9L"
-   target="_blank"
-   onclick="trackAndOpenLine('最下部CTA','https://line.me/ti/p/RzvX14AL9L'); return false;">
-LINEで無料相談（下部）
-</a>
-
-<br><br>
-
-<!-- 電話 -->
-<a href="tel:08055347560"
-   onclick="trackPhoneClick('電話');">
-電話で相談
-</a>
-
-<br><br>
-
-<!-- メール -->
-<a href="mailto:em.planning801@gmail.com"
-   onclick="trackMailClick('メール');">
-メールで相談
-</a>
-
-<!-- 計測スクリプト -->
 <script>
 function trackAndOpenLine(label, url) {
   try {
-    gtag('event', 'click', {
+    gtag('event', 'line_click', {
       event_category: 'LINE',
       event_label: label,
       transport_type: 'beacon'
@@ -79,21 +13,4 @@ function trackAndOpenLine(label, url) {
     window.open(url, '_blank');
   }
 }
-
-function trackPhoneClick(label) {
-  gtag('event', 'click', {
-    event_category: '電話',
-    event_label: label
-  });
-}
-
-function trackMailClick(label) {
-  gtag('event', 'click', {
-    event_category: 'メール',
-    event_label: label
-  });
-}
 </script>
-
-</body>
-</html>
