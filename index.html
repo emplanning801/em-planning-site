@@ -1,5 +1,8 @@
-<a href="https://line.me/ti/p/RzvX14AL9L"
-   target="_blank"
-   onclick="trackAndOpenLine('ファーストビュー','https://line.me/ti/p/RzvX14AL9L');">
-LINEで相談
-</a>
+<script>
+function trackAndOpenLine(label, url) {
+  gtag('event', 'line_click', {
+    event_category: 'LINE',
+    event_label: label
+  });
+}
+</script>
