@@ -21,6 +21,8 @@
       margin: 0;
       padding: 0;
       text-align: center;
+      background: #f7f9fc;
+      color: #222;
     }
     header {
       background: #0B3C5D;
@@ -34,6 +36,12 @@
     p {
       padding: 20px;
       font-size: 16px;
+      line-height: 1.7;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
     }
     .cta {
       display: block;
@@ -43,9 +51,31 @@
       color: #fff;
       text-decoration: none;
       width: 80%;
-      max-width: 300px;
-      border-radius: 5px;
+      max-width: 320px;
+      border-radius: 6px;
       font-weight: bold;
+      transition: opacity 0.2s ease;
+    }
+    .cta:hover {
+      opacity: 0.9;
+    }
+    .cta-phone {
+      background: #0B3C5D;
+    }
+    .cta-mail {
+      background: #666;
+    }
+    .box {
+      background: #fff;
+      margin: 20px auto;
+      padding: 24px;
+      max-width: 800px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    h2 {
+      margin-top: 0;
+      color: #0B3C5D;
     }
   </style>
 </head>
@@ -57,70 +87,100 @@
   <p>売上に直結する営業体制を構築します</p>
 </header>
 
-<p>
-  戦略設計から新規開拓、商談、クロージングまで一貫支援。
-  営業リソース不足を解決し、売上最大化を実現します。
-</p>
+<div class="wrap">
+  <div class="box">
+    <h2>営業のこんなお悩みありませんか？</h2>
+    <p>
+      新規開拓が進まない、営業人材が足りない、商談はあるのに受注に繋がらない。<br>
+      株式会社EM PLANNINGは、戦略設計から新規開拓、商談、クロージングまで一貫支援し、
+      売上最大化をサポートします。
+    </p>
+  </div>
 
-<!-- LINE CTA① -->
-<a class="cta"
-   href="https://line.me/ti/p/RzvX14AL9L"
-   target="_blank"
-   onclick="trackAndOpenLine('ファーストビュー');">
-LINEで無料相談（今すぐ）
-</a>
+  <!-- LINE CTA① -->
+  <a class="cta"
+     href="https://line.me/ti/p/RzvX14AL9L"
+     onclick="trackAndOpenLine('ファーストビュー','https://line.me/ti/p/RzvX14AL9L'); return false;">
+    LINEで無料相談（今すぐ）
+  </a>
 
-<!-- LINE CTA② -->
-<a class="cta"
-   href="https://line.me/ti/p/RzvX14AL9L"
-   target="_blank"
-   onclick="trackAndOpenLine('中段CTA');">
-LINEで無料相談（詳細はこちら）
-</a>
+  <div class="box">
+    <h2>対応内容</h2>
+    <p>
+      営業戦略設計／新規開拓支援／商談支援／クロージング支援／営業体制の改善提案まで対応します。
+    </p>
+  </div>
 
-<!-- LINE CTA③ -->
-<a class="cta"
-   href="https://line.me/ti/p/RzvX14AL9L"
-   target="_blank"
-   onclick="trackAndOpenLine('最下部CTA');">
-LINEで無料相談（最後にもう一度）
-</a>
+  <!-- LINE CTA② -->
+  <a class="cta"
+     href="https://line.me/ti/p/RzvX14AL9L"
+     onclick="trackAndOpenLine('中段CTA','https://line.me/ti/p/RzvX14AL9L'); return false;">
+    LINEで無料相談（詳細はこちら）
+  </a>
 
-<!-- 電話 -->
-<a class="cta"
-   href="tel:08055347560"
-   onclick="trackPhoneClick('電話');">
-電話で相談
-</a>
+  <div class="box">
+    <h2>まずはお気軽にご相談ください</h2>
+    <p>
+      無理な営業は一切行いません。現状の営業課題を整理し、最適な進め方をご提案します。
+    </p>
+  </div>
 
-<!-- メール -->
-<a class="cta"
-   href="mailto:em.planning801@gmail.com"
-   onclick="trackMailClick('メール');">
-メールで相談
-</a>
+  <!-- LINE CTA③ -->
+  <a class="cta"
+     href="https://line.me/ti/p/RzvX14AL9L"
+     onclick="trackAndOpenLine('最下部CTA','https://line.me/ti/p/RzvX14AL9L'); return false;">
+    LINEで無料相談（最後にもう一度）
+  </a>
+
+  <!-- 電話 -->
+  <a class="cta cta-phone"
+     href="tel:08055347560"
+     onclick="trackPhoneClick('電話');">
+    電話で相談
+  </a>
+
+  <!-- メール -->
+  <a class="cta cta-mail"
+     href="mailto:em.planning801@gmail.com"
+     onclick="trackMailClick('メール');">
+    メールで相談
+  </a>
+</div>
 
 <script>
-function trackAndOpenLine(label) {
-  gtag('event', 'line_click', {
-    event_category: 'LINE',
-    event_label: label
-  });
-}
+  function trackAndOpenLine(label, url) {
+    try {
+      gtag('event', 'line_click', {
+        event_category: 'LINE',
+        event_label: label,
+        transport_type: 'beacon'
+      });
+    } catch (e) {}
 
-function trackPhoneClick(label) {
-  gtag('event', 'phone_click', {
-    event_category: '電話',
-    event_label: label
-  });
-}
+    setTimeout(function() {
+      window.open(url, '_blank');
+    }, 200);
+  }
 
-function trackMailClick(label) {
-  gtag('event', 'mail_click', {
-    event_category: 'メール',
-    event_label: label
-  });
-}
+  function trackPhoneClick(label) {
+    try {
+      gtag('event', 'phone_click', {
+        event_category: '電話',
+        event_label: label,
+        transport_type: 'beacon'
+      });
+    } catch (e) {}
+  }
+
+  function trackMailClick(label) {
+    try {
+      gtag('event', 'mail_click', {
+        event_category: 'メール',
+        event_label: label,
+        transport_type: 'beacon'
+      });
+    } catch (e) {}
+  }
 </script>
 
 </body>
