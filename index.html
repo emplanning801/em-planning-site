@@ -3,8 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>法人向け営業代行（東京・神奈川）｜株式会社EM PLANNING</title>
+  <meta name="description" content="株式会社EM PLANNINGは、東京・神奈川を中心に法人向け営業代行・営業支援を提供。戦略設計から新規開拓、商談、クロージングまで一貫支援します。" />
 
-  <title>法人向け営業代行｜株式会社EM PLANNING</title>
+  <meta property="og:title" content="法人向け営業代行（東京・神奈川）｜株式会社EM PLANNING" />
+  <meta property="og:description" content="営業戦略設計から新規開拓、商談、クロージングまで一貫支援。売上に直結する営業体制を構築します。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://emplanning801.github.io/em-planning-site/" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XC567Z2G7X"></script>
@@ -16,172 +23,855 @@
   </script>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      background: #f7f9fc;
-      color: #222;
+    :root{
+      --navy:#103f66;
+      --navy-deep:#0b2f4c;
+      --green:#00c300;
+      --green-dark:#00a600;
+      --bg:#f4f7fb;
+      --text:#1e293b;
+      --muted:#5b6472;
+      --card:#ffffff;
+      --line:#d9e1ea;
+      --accent:#f59e0b;
+      --shadow:0 10px 30px rgba(16,63,102,.08);
+      --radius:16px;
+      --max:1100px;
     }
-    header {
-      background: #0B3C5D;
-      color: #fff;
-      padding: 40px 20px;
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Hiragino Sans","Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.75;
     }
-    h1 {
-      margin: 0;
-      font-size: 28px;
+
+    a{color:inherit}
+    img{max-width:100%;display:block}
+
+    .container{
+      width:min(var(--max), calc(100% - 32px));
+      margin:0 auto;
     }
-    p {
-      padding: 20px;
-      font-size: 16px;
-      line-height: 1.7;
+
+    .header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(217,225,234,.9);
     }
-    .wrap {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
+
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      min-height:72px;
     }
-    .cta {
-      display: block;
-      margin: 20px auto;
-      padding: 15px 25px;
-      background: #00C300;
-      color: #fff;
-      text-decoration: none;
-      width: 80%;
-      max-width: 320px;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: opacity 0.2s ease;
+
+    .brand{
+      font-weight:800;
+      font-size:20px;
+      color:var(--navy);
+      text-decoration:none;
+      letter-spacing:.02em;
+      white-space:nowrap;
     }
-    .cta:hover {
-      opacity: 0.9;
+
+    .nav{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+      justify-content:flex-end;
     }
-    .cta-phone {
-      background: #0B3C5D;
+
+    .nav a{
+      text-decoration:none;
+      color:var(--navy);
+      font-weight:700;
+      font-size:14px;
+      padding:10px 14px;
+      border-radius:999px;
     }
-    .cta-mail {
-      background: #666;
+
+    .nav a:hover{
+      background:#eef4fa;
     }
-    .box {
-      background: #fff;
-      margin: 20px auto;
-      padding: 24px;
-      max-width: 800px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+    .hero{
+      background:
+        linear-gradient(135deg, rgba(11,47,76,.92), rgba(16,63,102,.84)),
+        radial-gradient(circle at top right, rgba(255,255,255,.08), transparent 30%);
+      color:#fff;
+      padding:82px 0 72px;
+      position:relative;
+      overflow:hidden;
     }
-    h2 {
-      margin-top: 0;
-      color: #0B3C5D;
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:36px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      margin-bottom:14px;
+      padding:7px 12px;
+      border:1px solid rgba(255,255,255,.22);
+      background:rgba(255,255,255,.08);
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.08em;
+    }
+
+    .hero h1{
+      margin:0 0 16px;
+      font-size:clamp(34px, 5vw, 58px);
+      line-height:1.18;
+      letter-spacing:.01em;
+    }
+
+    .hero .lead{
+      margin:0 0 22px;
+      font-size:clamp(16px, 2.1vw, 19px);
+      color:rgba(255,255,255,.92);
+    }
+
+    .hero-points{
+      margin:0 0 28px;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+
+    .hero-points li{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      color:rgba(255,255,255,.95);
+      font-weight:600;
+    }
+
+    .hero-points li::before{
+      content:"✓";
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:22px;
+      height:22px;
+      margin-top:2px;
+      flex:0 0 22px;
+      border-radius:999px;
+      background:rgba(255,255,255,.16);
+      font-size:14px;
+    }
+
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-bottom:14px;
+    }
+
+    .btn{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      gap:8px;
+      min-height:54px;
+      padding:0 22px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:800;
+      letter-spacing:.01em;
+      transition:.2s ease;
+      border:none;
+      cursor:pointer;
+      box-shadow:var(--shadow);
+    }
+
+    .btn-line{
+      background:var(--green);
+      color:#fff;
+    }
+
+    .btn-line:hover{background:var(--green-dark); transform:translateY(-1px)}
+    .btn-primary{
+      background:#fff;
+      color:var(--navy);
+    }
+    .btn-primary:hover{transform:translateY(-1px)}
+    .btn-outline{
+      background:transparent;
+      color:#fff;
+      border:1px solid rgba(255,255,255,.28);
+      box-shadow:none;
+    }
+    .btn-outline:hover{background:rgba(255,255,255,.08)}
+
+    .hero-note{
+      font-size:13px;
+      color:rgba(255,255,255,.78);
+    }
+
+    .hero-card{
+      background:rgba(255,255,255,.1);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:22px;
+      padding:24px;
+      box-shadow:0 20px 60px rgba(0,0,0,.14);
+    }
+
+    .hero-card h2{
+      margin:0 0 12px;
+      font-size:22px;
+    }
+
+    .hero-card .mini{
+      color:rgba(255,255,255,.86);
+      margin-bottom:16px;
+    }
+
+    .hero-stats{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .stat{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:16px;
+      padding:16px;
+    }
+
+    .stat strong{
+      display:block;
+      font-size:26px;
+      line-height:1.1;
+      margin-bottom:4px;
+    }
+
+    section{
+      padding:72px 0;
+    }
+
+    .section-head{
+      max-width:760px;
+      margin:0 auto 34px;
+      text-align:center;
+    }
+
+    .section-head h2{
+      margin:0 0 10px;
+      font-size:clamp(28px, 4vw, 40px);
+      color:var(--navy);
+      line-height:1.25;
+    }
+
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    .cards-3{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:20px;
+    }
+
+    .cards-2{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .card h3{
+      margin:0 0 10px;
+      color:var(--navy);
+      font-size:22px;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+      padding:0;
+    }
+
+    .problem-list{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:16px;
+      margin-top:28px;
+    }
+
+    .problem{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:18px 16px;
+      text-align:center;
+      font-weight:700;
+      box-shadow:var(--shadow);
+    }
+
+    .problem strong{
+      color:var(--navy);
+    }
+
+    .compare{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .compare .card{
+      height:100%;
+    }
+
+    .badge{
+      display:inline-block;
+      margin-bottom:10px;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.05em;
+    }
+
+    .badge-gray{
+      background:#eef2f7;
+      color:#475569;
+    }
+
+    .badge-green{
+      background:#e7fbe7;
+      color:#128312;
+    }
+
+    .check-list{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:grid;
+      gap:10px;
+    }
+
+    .check-list li{
+      padding-left:28px;
+      position:relative;
+      color:var(--text);
+      font-weight:600;
+    }
+
+    .check-list li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      top:0;
+      width:20px;
+      height:20px;
+      border-radius:999px;
+      background:#eaf7ee;
+      color:#15803d;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:12px;
+    }
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:20px;
+    }
+
+    .service-no{
+      display:inline-flex;
+      width:34px;
+      height:34px;
+      border-radius:999px;
+      align-items:center;
+      justify-content:center;
+      background:#eaf1f8;
+      color:var(--navy);
+      font-weight:800;
+      margin-bottom:12px;
+    }
+
+    .flow{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:16px;
+    }
+
+    .flow-step{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:22px 18px;
+      text-align:center;
+      box-shadow:var(--shadow);
+    }
+
+    .flow-step strong{
+      display:block;
+      margin-bottom:8px;
+      color:var(--navy);
+      font-size:18px;
+    }
+
+    .flow-step p{
+      margin:0;
+      padding:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .voice{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:20px;
+    }
+
+    .quote{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .quote p{
+      margin:0 0 14px;
+      padding:0;
+      color:var(--text);
+    }
+
+    .quote strong{
+      color:var(--navy);
+      font-size:14px;
+    }
+
+    .cta-section{
+      background:linear-gradient(135deg, var(--navy-deep), var(--navy));
+      color:#fff;
+    }
+
+    .cta-box{
+      max-width:900px;
+      margin:0 auto;
+      text-align:center;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:24px;
+      padding:36px 24px;
+    }
+
+    .cta-box h2{
+      margin:0 0 12px;
+      font-size:clamp(28px,4vw,40px);
+    }
+
+    .cta-box p{
+      margin:0 auto 20px;
+      max-width:700px;
+      padding:0;
+      color:rgba(255,255,255,.92);
+    }
+
+    .cta-sub{
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.14);
+      font-size:13px;
+      font-weight:700;
+      margin-bottom:12px;
+    }
+
+    .contact-note{
+      margin-top:14px;
+      font-size:13px;
+      color:rgba(255,255,255,.8);
+    }
+
+    .footer{
+      padding:28px 0 50px;
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .spacer-cta{
+      margin-top:26px;
+      text-align:center;
+    }
+
+    @media (max-width: 960px){
+      .hero-grid,
+      .cards-3,
+      .cards-2,
+      .compare,
+      .service-grid,
+      .voice{
+        grid-template-columns:1fr;
+      }
+
+      .problem-list{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .flow{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .header-inner{
+        align-items:flex-start;
+        padding:14px 0;
+        flex-direction:column;
+      }
+
+      .nav{
+        width:100%;
+        justify-content:flex-start;
+      }
+    }
+
+    @media (max-width: 640px){
+      .hero{
+        padding:64px 0 54px;
+      }
+
+      section{
+        padding:56px 0;
+      }
+
+      .problem-list,
+      .flow{
+        grid-template-columns:1fr;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .cta-row{
+        flex-direction:column;
+      }
     }
   </style>
 </head>
 
 <body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#top" class="brand">EM PLANNING</a>
+      <nav class="nav">
+        <a href="#problem">課題</a>
+        <a href="#service">対応内容</a>
+        <a href="#difference">選ばれる理由</a>
+        <a href="#flow">導入の流れ</a>
+        <a href="#contact">無料相談</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <h1>法人向け営業代行（東京・神奈川）</h1>
-  <p>売上に直結する営業体制を構築します</p>
-</header>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">B2B SALES SUPPORT</span>
+          <h1>法人向け営業代行<br>東京・神奈川で<br>売上を最大化する</h1>
+          <p class="lead">
+            新規開拓が進まない、営業人材が足りない、商談はあるのに受注に繋がらない。<br>
+            株式会社EM PLANNINGは、営業戦略設計から新規開拓、商談、クロージングまで一貫支援します。
+          </p>
 
-<div class="wrap">
-  <div class="box">
-    <h2>営業のこんなお悩みありませんか？</h2>
-    <p>
-      新規開拓が進まない、営業人材が足りない、商談はあるのに受注に繋がらない。<br>
-      株式会社EM PLANNINGは、戦略設計から新規開拓、商談、クロージングまで一貫支援し、
-      売上最大化をサポートします。
-    </p>
-  </div>
+          <ul class="hero-points">
+            <li>営業戦略の設計から実行まで一気通貫で対応</li>
+            <li>新規開拓・商談支援・クロージング支援まで対応</li>
+            <li>無理な営業は一切なし。相談のみでも歓迎</li>
+          </ul>
 
-  <!-- LINE CTA① -->
-  <a class="cta"
-     href="https://line.me/ti/p/RzvX14AL9L"
-     onclick="trackAndOpenLine('ファーストビュー','https://line.me/ti/p/RzvX14AL9L'); return false;">
-    LINEで無料相談（今すぐ）
-  </a>
+          <div class="cta-row">
+            <a class="btn btn-line"
+               href="https://line.me/ti/p/RzvX14AL9L"
+               onclick="trackAndOpenLine('ファーストビュー','https://line.me/ti/p/RzvX14AL9L'); return false;">
+              LINEで30秒相談する
+            </a>
+            <a class="btn btn-primary" href="#contact">お問い合わせを見る</a>
+          </div>
 
-  <div class="box">
-    <h2>対応内容</h2>
-    <p>
-      営業戦略設計／新規開拓支援／商談支援／クロージング支援／営業体制の改善提案まで対応します。
-    </p>
-  </div>
+          <div class="hero-note">※営業代行の相場相談だけでも歓迎です</div>
+        </div>
 
-  <!-- LINE CTA② -->
-  <a class="cta"
-     href="https://line.me/ti/p/RzvX14AL9L"
-     onclick="trackAndOpenLine('中段CTA','https://line.me/ti/p/RzvX14AL9L'); return false;">
-    LINEで無料相談（詳細はこちら）
-  </a>
+        <div class="hero-card">
+          <h2>こんな企業様におすすめ</h2>
+          <p class="mini">売上に直結する営業体制を、外部パートナーとして構築します。</p>
 
-  <div class="box">
-    <h2>まずはお気軽にご相談ください</h2>
-    <p>
-      無理な営業は一切行いません。現状の営業課題を整理し、最適な進め方をご提案します。
-    </p>
-  </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>新規開拓</strong>
+              <span>営業先リスト・アプローチ設計</span>
+            </div>
+            <div class="stat">
+              <strong>商談支援</strong>
+              <span>提案整理・受注導線の強化</span>
+            </div>
+            <div class="stat">
+              <strong>営業改善</strong>
+              <span>属人化しない仕組みづくり</span>
+            </div>
+            <div class="stat">
+              <strong>継続伴走</strong>
+              <span>単発で終わらない支援体制</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- LINE CTA③ -->
-  <a class="cta"
-     href="https://line.me/ti/p/RzvX14AL9L"
-     onclick="trackAndOpenLine('最下部CTA','https://line.me/ti/p/RzvX14AL9L'); return false;">
-    LINEで無料相談（最後にもう一度）
-  </a>
+    <section id="problem">
+      <div class="container">
+        <div class="section-head">
+          <h2>営業のこんなお悩みありませんか？</h2>
+          <p>営業課題の多くは、担当者の努力不足ではなく、設計と導線の問題です。</p>
+        </div>
 
-  <!-- 電話 -->
-  <a class="cta cta-phone"
-     href="tel:08055347560"
-     onclick="trackPhoneClick('電話');">
-    電話で相談
-  </a>
+        <div class="problem-list">
+          <div class="problem"><strong>新規開拓</strong><br>営業先が増えない</div>
+          <div class="problem"><strong>営業人材</strong><br>採用しても定着しない</div>
+          <div class="problem"><strong>商談化</strong><br>アポはあるのに受注しない</div>
+          <div class="problem"><strong>提案力</strong><br>話は聞かれるが刺さらない</div>
+          <div class="problem"><strong>再現性</strong><br>属人化して仕組み化できない</div>
+          <div class="problem"><strong>時間不足</strong><br>現場と営業を両立できない</div>
+        </div>
 
-  <!-- メール -->
-  <a class="cta cta-mail"
-     href="mailto:em.planning801@gmail.com"
-     onclick="trackMailClick('メール');">
-    メールで相談
-  </a>
-</div>
+        <div class="spacer-cta">
+          <a class="btn btn-line"
+             href="https://line.me/ti/p/RzvX14AL9L"
+             onclick="trackAndOpenLine('中段CTA','https://line.me/ti/p/RzvX14AL9L'); return false;">
+            LINEで無料相談する
+          </a>
+        </div>
+      </div>
+    </section>
 
-<script>
-  function trackAndOpenLine(label, url) {
-    try {
-      gtag('event', 'line_click', {
-        event_category: 'LINE',
-        event_label: label,
-        transport_type: 'beacon'
-      });
-    } catch (e) {}
+    <section id="difference">
+      <div class="container">
+        <div class="section-head">
+          <h2>EM PLANNINGが選ばれる理由</h2>
+          <p>アポイント取得だけで終わらず、売上に繋がる営業支援を重視しています。</p>
+        </div>
 
-    setTimeout(function() {
-      window.open(url, '_blank');
-    }, 200);
-  }
+        <div class="compare">
+          <div class="card">
+            <span class="badge badge-gray">一般的な営業代行</span>
+            <h3>アポ取得で止まりやすい</h3>
+            <ul class="check-list">
+              <li>商談以降は社内任せになりやすい</li>
+              <li>受注までの設計が弱い</li>
+              <li>成果が売上に直結しにくい</li>
+              <li>営業改善が残りにくい</li>
+            </ul>
+          </div>
 
-  function trackPhoneClick(label) {
-    try {
-      gtag('event', 'phone_click', {
-        event_category: '電話',
-        event_label: label,
-        transport_type: 'beacon'
-      });
-    } catch (e) {}
-  }
+          <div class="card">
+            <span class="badge badge-green">EM PLANNING</span>
+            <h3>戦略から受注導線まで支援</h3>
+            <ul class="check-list">
+              <li>営業戦略設計から伴走</li>
+              <li>新規開拓・商談・提案まで対応</li>
+              <li>クロージングまで見据えた支援</li>
+              <li>継続的な営業体制づくりを重視</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  function trackMailClick(label) {
-    try {
-      gtag('event', 'mail_click', {
-        event_category: 'メール',
-        event_label: label,
-        transport_type: 'beacon'
-      });
-    } catch (e) {}
-  }
-</script>
+    <section id="service">
+      <div class="container">
+        <div class="section-head">
+          <h2>対応内容</h2>
+          <p>単なる外注ではなく、実行まで支える営業パートナーとして動きます。</p>
+        </div>
 
+        <div class="service-grid">
+          <div class="card">
+            <span class="service-no">01</span>
+            <h3>営業戦略設計</h3>
+            <p>商材特性・ターゲット・営業導線を整理し、成果に繋がる営業設計を行います。</p>
+          </div>
+
+          <div class="card">
+            <span class="service-no">02</span>
+            <h3>新規開拓支援</h3>
+            <p>営業先の洗い出し、リスト設計、接触導線の構築まで実務ベースで支援します。</p>
+          </div>
+
+          <div class="card">
+            <span class="service-no">03</span>
+            <h3>商談支援</h3>
+            <p>ヒアリング整理、提案の組み立て、商談同席や進行改善まで対応します。</p>
+          </div>
+
+          <div class="card">
+            <span class="service-no">04</span>
+            <h3>クロージング支援</h3>
+            <p>受注率を上げるための提案整理、条件調整、最終クロージング導線まで支援します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="flow">
+      <div class="container">
+        <div class="section-head">
+          <h2>導入の流れ</h2>
+          <p>初回相談から実行開始まで、スムーズに進められる形にしています。</p>
+        </div>
+
+        <div class="flow">
+          <div class="flow-step">
+            <strong>1. 無料相談</strong>
+            <p>現状の営業課題をヒアリングします。</p>
+          </div>
+          <div class="flow-step">
+            <strong>2. 現状整理</strong>
+            <p>課題・優先順位・打ち手を明確化します。</p>
+          </div>
+          <div class="flow-step">
+            <strong>3. 提案</strong>
+            <p>最適な支援内容と進め方を提案します。</p>
+          </div>
+          <div class="flow-step">
+            <strong>4. 支援開始</strong>
+            <p>戦略設計から実行まで伴走します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>お客様の声</h2>
+          <p>受注導線まで見据えた支援が評価されています。</p>
+        </div>
+
+        <div class="voice">
+          <div class="quote">
+            <p>営業体制が整理され、商談数が安定してきました。単なるアポ取得ではなく、受注まで見据えた支援が非常に助かっています。</p>
+            <strong>法人営業支援 / 物流関連企業様</strong>
+          </div>
+          <div class="quote">
+            <p>営業リソース不足に悩んでいましたが、外部パートナーとして機能してもらえたことで、社内の営業負荷を大きく軽減できました。</p>
+            <strong>営業改善支援 / BtoBサービス企業様</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-sub">FREE CONSULTATION</div>
+          <h2>まずは無料でご相談ください</h2>
+          <p>
+            現状の営業課題を整理し、最適な進め方をご提案します。<br>
+            無理な営業は一切行いません。相場感の確認だけでも歓迎です。
+          </p>
+
+          <div class="cta-row" style="justify-content:center;">
+            <a class="btn btn-line"
+               href="https://line.me/ti/p/RzvX14AL9L"
+               onclick="trackAndOpenLine('最下部CTA','https://line.me/ti/p/RzvX14AL9L'); return false;">
+              LINEで無料相談する
+            </a>
+
+            <a class="btn btn-primary"
+               href="tel:08055347560"
+               onclick="trackPhoneClick('電話相談ボタン')">
+              電話で相談する
+            </a>
+
+            <a class="btn btn-outline"
+               href="mailto:em.planning801@gmail.com?subject=【無料相談】営業支援について"
+               onclick="trackMailClick('メール相談ボタン')">
+              メールで相談する
+            </a>
+          </div>
+
+          <div class="contact-note">
+            受付目安：平日対応 / 相談のみでも可 / 営業の押し売りは一切ありません
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © 株式会社EM PLANNING
+    </div>
+  </footer>
+
+  <script>
+    function trackAndOpenLine(label, url) {
+      try {
+        gtag('event', 'line_click', {
+          event_category: 'LINE',
+          event_label: label,
+          transport_type: 'beacon'
+        });
+      } catch (e) {}
+
+      setTimeout(function() {
+        window.open(url, '_blank');
+      }, 200);
+    }
+
+    function trackPhoneClick(label) {
+      try {
+        gtag('event', 'phone_click', {
+          event_category: '電話',
+          event_label: label,
+          transport_type: 'beacon'
+        });
+      } catch (e) {}
+    }
+
+    function trackMailClick(label) {
+      try {
+        gtag('event', 'mail_click', {
+          event_category: 'メール',
+          event_label: label,
+          transport_type: 'beacon'
+        });
+      } catch (e) {}
+    }
+  </script>
 </body>
 </html>
