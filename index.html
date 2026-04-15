@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
-  <title>法人向け営業代行（東京・神奈川）｜株式会社EM PLANNING</title>
-  <meta name="description" content="株式会社EM PLANNINGは、東京・神奈川を中心に法人向け営業代行・営業支援を提供。戦略設計から新規開拓、商談、クロージングまで一貫支援します。" />
+  <title>営業人材ゼロでも新規商談を増やす仕組みを構築｜株式会社EM PLANNING</title>
+  <meta name="description" content="東京・神奈川の法人向け営業代行。営業戦略設計から新規開拓、商談、クロージングまで一貫支援。まずは無料相談から。" />
 
-  <meta property="og:title" content="法人向け営業代行（東京・神奈川）｜株式会社EM PLANNING" />
-  <meta property="og:description" content="営業戦略設計から新規開拓、商談、クロージングまで一貫支援。売上に直結する営業体制を構築します。" />
+  <meta property="og:title" content="営業人材ゼロでも新規商談を増やす仕組みを構築｜株式会社EM PLANNING" />
+  <meta property="og:description" content="東京・神奈川の法人向け営業代行。戦略設計から新規開拓、商談、クロージングまで一貫支援します。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://emplanning801.github.io/em-planning-site/" />
   <meta property="og:image" content="https://emplanning801.github.io/em-planning-site/logo-primary.jpg.JPG" />
@@ -51,7 +51,6 @@
 
     img{max-width:100%;display:block}
     a{text-decoration:none;color:inherit}
-
     .container{
       width:min(var(--max), calc(100% - 32px));
       margin:0 auto;
@@ -138,7 +137,7 @@
     }
 
     .hero-copy{
-      max-width:760px;
+      max-width:780px;
     }
 
     .eyebrow{
@@ -155,14 +154,20 @@
 
     .hero h1{
       margin:0 0 16px;
-      font-size:clamp(34px, 5vw, 56px);
+      font-size:clamp(34px,5vw,58px);
       line-height:1.18;
     }
 
     .hero .lead{
+      margin:0 0 18px;
+      font-size:clamp(16px,2.1vw,20px);
+      color:rgba(255,255,255,.94);
+    }
+
+    .hero-sublead{
       margin:0 0 22px;
-      font-size:clamp(16px, 2.1vw, 19px);
-      color:rgba(255,255,255,.92);
+      font-size:18px;
+      color:rgba(255,255,255,.86);
     }
 
     .hero-points{
@@ -199,7 +204,7 @@
       display:flex;
       flex-wrap:wrap;
       gap:14px;
-      margin-bottom:14px;
+      margin-bottom:12px;
     }
 
     .btn{
@@ -229,7 +234,7 @@
 
     .hero-note{
       font-size:13px;
-      color:rgba(255,255,255,.78);
+      color:rgba(255,255,255,.82);
     }
 
     .hero-visual{
@@ -243,14 +248,14 @@
 
     .hero-visual img{
       width:100%;
-      aspect-ratio: 16 / 9;
+      aspect-ratio:16 / 9;
       object-fit:cover;
     }
 
     section{padding:72px 0}
 
     .section-head{
-      max-width:760px;
+      max-width:800px;
       margin:0 auto 34px;
       text-align:center;
     }
@@ -268,14 +273,16 @@
       font-size:16px;
     }
 
-    .problem-list{
+    .problem-list,
+    .target-list{
       display:grid;
       grid-template-columns:repeat(3, 1fr);
       gap:16px;
       margin-top:28px;
     }
 
-    .problem{
+    .problem,
+    .target{
       background:#fff;
       border:1px solid var(--line);
       border-radius:14px;
@@ -285,7 +292,8 @@
       box-shadow:var(--shadow);
     }
 
-    .problem strong{color:var(--navy)}
+    .problem strong,
+    .target strong{color:var(--navy)}
 
     .compare{
       display:grid;
@@ -355,7 +363,9 @@
       font-size:12px;
     }
 
-    .service-grid{
+    .service-grid,
+    .price-grid,
+    .faq-grid{
       display:grid;
       grid-template-columns:repeat(2,1fr);
       gap:20px;
@@ -372,6 +382,58 @@
       color:var(--navy);
       font-weight:800;
       margin-bottom:12px;
+    }
+
+    .price-card{
+      position:relative;
+    }
+
+    .price-label{
+      position:absolute;
+      top:18px;
+      right:18px;
+      background:#eaf1f8;
+      color:var(--navy);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .price-card strong{
+      display:block;
+      font-size:30px;
+      color:var(--navy);
+      margin:6px 0 10px;
+    }
+
+    .price-note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:10px;
+    }
+
+    .trust-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .trust-item{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:24px 20px;
+      box-shadow:var(--shadow);
+      text-align:center;
+    }
+
+    .trust-item strong{
+      display:block;
+      font-size:32px;
+      line-height:1.1;
+      color:var(--navy);
+      margin-bottom:8px;
     }
 
     .message-grid{
@@ -439,6 +501,16 @@
       font-size:14px;
     }
 
+    .faq-item h3{
+      margin:0 0 10px;
+      font-size:18px;
+      color:var(--navy);
+    }
+
+    .faq-item p{
+      margin:0;
+    }
+
     .cta-section{
       background:linear-gradient(135deg, var(--navy-deep), var(--navy));
       color:#fff;
@@ -497,12 +569,16 @@
     @media (max-width: 960px){
       .compare,
       .service-grid,
+      .price-grid,
       .voice,
-      .message-grid{
+      .faq-grid,
+      .message-grid,
+      .trust-grid{
         grid-template-columns:1fr;
       }
 
-      .problem-list{
+      .problem-list,
+      .target-list{
         grid-template-columns:1fr 1fr;
       }
 
@@ -520,15 +596,16 @@
 
     @media (max-width: 640px){
       section{padding:56px 0}
-      .problem-list{grid-template-columns:1fr}
+      .problem-list,
+      .target-list{
+        grid-template-columns:1fr;
+      }
       .cta-row{flex-direction:column}
       .btn{width:100%}
       .brand-logo{width:48px; height:48px}
       .brand-text strong{font-size:18px}
       .brand-text span{white-space:normal}
-      .hero-visual{
-        margin-top:24px;
-      }
+      .hero-visual{margin-top:24px}
     }
   </style>
 </head>
@@ -545,9 +622,10 @@
       </a>
 
       <nav class="nav">
+        <a href="#target">対象企業</a>
         <a href="#problem">課題</a>
         <a href="#service">対応内容</a>
-        <a href="#difference">選ばれる理由</a>
+        <a href="#price">料金</a>
         <a href="#message">代表</a>
         <a href="#contact">無料相談</a>
       </nav>
@@ -559,10 +637,12 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow">B2B SALES SUPPORT</span>
-          <h1>法人向け営業代行<br>東京・神奈川で<br>売上を最大化する</h1>
+          <h1>営業人材ゼロでも、<br>新規商談を増やす仕組みを構築。<br>東京・神奈川の法人向け営業代行</h1>
           <p class="lead">
-            新規開拓が進まない。営業人材が足りない。商談はあるのに受注に繋がらない。<br>
-            株式会社EM PLANNINGは、営業戦略設計から新規開拓、商談、クロージングまで一貫支援します。
+            新規開拓が進まない。営業担当を採用しても定着しない。商談はあるのに受注に繋がらない。
+          </p>
+          <p class="hero-sublead">
+            株式会社EM PLANNINGは、営業戦略設計から新規開拓、商談、クロージングまで一貫支援し、売上に直結する営業体制を構築します。
           </p>
 
           <ul class="hero-points">
@@ -575,16 +655,62 @@
             <a class="btn btn-line"
                href="https://line.me/ti/p/RzvX14AL9L"
                onclick="trackAndOpenLine('ファーストビュー','https://line.me/ti/p/RzvX14AL9L'); return false;">
-              LINEで30秒相談する
+              LINEで無料相談する
             </a>
             <a class="btn btn-primary" href="#contact">お問い合わせを見る</a>
           </div>
 
-          <div class="hero-note">※営業代行の相場相談だけでも歓迎です</div>
+          <div class="hero-note">
+            ※ 無理な営業は一切ありません<br>
+            ※ 相談のみでも歓迎です<br>
+            ※ 相場感の確認だけでも大丈夫です
+          </div>
         </div>
 
         <div class="hero-visual">
-          <img src="ChatGPT Image 2026年4月15日 17_47_43.png" alt="営業商談イメージ">
+          <img src="sales.jpg.png" alt="営業商談イメージ">
+        </div>
+      </div>
+    </section>
+
+    <section id="target">
+      <div class="container">
+        <div class="section-head">
+          <h2>このような企業様におすすめです</h2>
+          <p>誰に依頼すべきか分からない段階でも、まずは現状整理から対応します。</p>
+        </div>
+
+        <div class="target-list">
+          <div class="target"><strong>営業専任不在</strong><br>営業担当がいない、または不足している</div>
+          <div class="target"><strong>新規開拓強化</strong><br>BtoB営業を伸ばしたい</div>
+          <div class="target"><strong>受注率改善</strong><br>商談はあるが受注しない</div>
+          <div class="target"><strong>営業の属人化</strong><br>仕組み化したい</div>
+          <div class="target"><strong>採用難</strong><br>営業人材が定着しない</div>
+          <div class="target"><strong>現場兼任</strong><br>営業に時間を割けない</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>実行だけでなく、設計から支援します</h2>
+          <p>営業代行で最も重要なのは、担当者を増やすことではなく、受注までの導線を整えることです。</p>
+        </div>
+
+        <div class="trust-grid">
+          <div class="trust-item">
+            <strong>17年以上</strong>
+            営業経験ベースで支援
+          </div>
+          <div class="trust-item">
+            <strong>BtoB特化</strong>
+            法人向け営業支援
+          </div>
+          <div class="trust-item">
+            <strong>一貫対応</strong>
+            戦略〜商談〜クロージング
+          </div>
         </div>
       </div>
     </section>
@@ -608,8 +734,8 @@
         <div class="spacer-cta">
           <a class="btn btn-line"
              href="https://line.me/ti/p/RzvX14AL9L"
-             onclick="trackAndOpenLine('中段CTA','https://line.me/ti/p/RzvX14AL9L'); return false;">
-            LINEで無料相談する
+             onclick="trackAndOpenLine('課題セクションCTA','https://line.me/ti/p/RzvX14AL9L'); return false;">
+            まずは営業課題を無料相談する
           </a>
         </div>
       </div>
@@ -683,6 +809,49 @@
       </div>
     </section>
 
+    <section id="price">
+      <div class="container">
+        <div class="section-head">
+          <h2>料金プラン</h2>
+          <p>固定費のみではなく、成果に応じた形も含めて企業様ごとに最適な形をご提案します。</p>
+        </div>
+
+        <div class="price-grid">
+          <div class="card price-card">
+            <span class="price-label">入口プラン</span>
+            <h3>ライト</h3>
+            <strong>月額10万円〜</strong>
+            <p>営業相談・設計支援を中心に、現状整理と改善方針を明確化したい企業様向け。</p>
+            <div class="price-note">まずは相談したい、方向性を整理したい企業様向け</div>
+          </div>
+
+          <div class="card price-card">
+            <span class="price-label">主力プラン</span>
+            <h3>スタンダード</h3>
+            <strong>月額30万円〜</strong>
+            <p>営業戦略設計に加え、新規開拓や商談支援まで含めた実行支援プラン。</p>
+            <div class="price-note">多くの企業様におすすめの中心プラン</div>
+          </div>
+
+          <div class="card price-card">
+            <span class="price-label">利益ゾーン</span>
+            <h3>プレミアム</h3>
+            <strong>月額50万円〜</strong>
+            <p>戦略設計から新規開拓、商談、クロージング支援まで深く伴走するフル支援プラン。</p>
+            <div class="price-note">営業を本気で立て直したい企業様向け</div>
+          </div>
+
+          <div class="card">
+            <h3>補足</h3>
+            <p>
+              料金は、業種・商材・営業フェーズ・求める支援範囲に応じて変動します。<br>
+              まずは無料相談にて、現状と課題を整理した上で最適な形をご提案します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="message">
       <div class="container">
         <div class="section-head">
@@ -699,13 +868,10 @@
             <h3>森 慎二</h3>
             <p class="role">株式会社EM PLANNING 代表</p>
             <p>
-              多くの企業様が営業課題を抱えていますが、本質は「担当者の頑張り」だけではなく、
-              受注までを見据えた営業導線と実行体制にあります。
+              多くの企業様が営業課題を抱えていますが、本質は「担当者の頑張り」だけではなく、受注までを見据えた営業導線と実行体制にあります。
             </p>
             <p>
-              当社は、単なるアポイント取得代行ではありません。
-              戦略設計から新規開拓、商談、提案、クロージングまで一貫して支援し、
-              売上に直結する営業体制の構築をサポートします。
+              当社は、単なるアポイント取得代行ではありません。戦略設計から新規開拓、商談、提案、クロージングまで一貫して支援し、売上に直結する営業体制の構築をサポートします。
             </p>
             <p>
               アポだけで終わらない営業を実現し、継続的な成果に繋がる仕組みを一緒に作っていきます。
@@ -735,14 +901,45 @@
       </div>
     </section>
 
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>よくある質問</h2>
+          <p>相談前に不安を感じやすいポイントを先にまとめました。</p>
+        </div>
+
+        <div class="faq-grid">
+          <div class="card faq-item">
+            <h3>まだ依頼するか決まっていませんが相談して大丈夫ですか？</h3>
+            <p>はい、相談のみでも問題ありません。現状整理だけでも歓迎です。</p>
+          </div>
+
+          <div class="card faq-item">
+            <h3>どの段階から依頼できますか？</h3>
+            <p>営業戦略の整理段階からでも対応可能です。商談改善だけのご相談も可能です。</p>
+          </div>
+
+          <div class="card faq-item">
+            <h3>東京・神奈川以外も相談できますか？</h3>
+            <p>内容に応じてご相談可能です。まずはお気軽にお問い合わせください。</p>
+          </div>
+
+          <div class="card faq-item">
+            <h3>いきなり契約を迫られることはありませんか？</h3>
+            <p>ありません。無理な営業は一切行いません。必要性が合う場合のみご提案します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="cta-section">
       <div class="container">
         <div class="cta-box">
           <div class="cta-sub">FREE CONSULTATION</div>
           <h2>まずは無料でご相談ください</h2>
           <p>
-            現状の営業課題を整理し、最適な進め方をご提案します。<br>
-            無理な営業は一切行いません。相場感の確認だけでも歓迎です。
+            営業の悩みは、担当者の努力だけでは解決しないことが多くあります。<br>
+            まずは現状を整理し、どこを改善すべきかを明確にしませんか？
           </p>
 
           <div class="cta-row" style="justify-content:center;">
