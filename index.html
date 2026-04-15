@@ -1,16 +1,5 @@
-<script>
-function trackAndOpenLine(label, url) {
-  try {
-    gtag('event', 'line_click', {
-      event_category: 'LINE',
-      event_label: label,
-      transport_type: 'beacon'
-    });
-    setTimeout(function(){
-      window.open(url, '_blank');
-    }, 300);
-  } catch(e) {
-    window.open(url, '_blank');
-  }
-}
-</script>
+<a href="https://line.me/ti/p/RzvX14AL9L"
+   target="_blank"
+   onclick="trackAndOpenLine('ファーストビュー','https://line.me/ti/p/RzvX14AL9L');">
+LINEで相談
+</a>
