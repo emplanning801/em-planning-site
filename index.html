@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
-  <title>営業人材ゼロでも新規商談を増やす仕組みを構築｜株式会社EM PLANNING</title>
+  <title>法人向け営業代行｜株式会社EM PLANNING</title>
   <meta name="description" content="東京・神奈川の法人向け営業代行。営業戦略設計から新規開拓、商談、クロージングまで一貫支援。まずは無料相談から。" />
 
-  <meta property="og:title" content="営業人材ゼロでも新規商談を増やす仕組みを構築｜株式会社EM PLANNING" />
-  <meta property="og:description" content="東京・神奈川の法人向け営業代行。戦略設計から新規開拓、商談、クロージングまで一貫支援します。" />
+  <meta property="og:title" content="法人向け営業代行｜株式会社EM PLANNING" />
+  <meta property="og:description" content="東京・神奈川の法人向け営業代行。営業戦略設計から新規開拓、商談、クロージングまで一貫支援します。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://emplanning801.github.io/em-planning-site/" />
   <meta property="og:image" content="https://emplanning801.github.io/em-planning-site/0D5B1F59-E1A6-40F6-A740-8A16EF5DC07B.jpeg" />
@@ -36,7 +36,7 @@
       --shadow:0 12px 32px rgba(16,63,102,.08);
       --hero-shadow:0 20px 60px rgba(0,0,0,.18);
       --radius:18px;
-      --max:1120px;
+      --max:1080px;
     }
 
     *{box-sizing:border-box}
@@ -46,7 +46,7 @@
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Hiragino Sans","Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
       color:var(--text);
       background:var(--bg);
-      line-height:1.7;
+      line-height:1.75;
     }
 
     img{max-width:100%;display:block}
@@ -61,7 +61,7 @@
       position:sticky;
       top:0;
       z-index:100;
-      background:rgba(255,255,255,.94);
+      background:rgba(255,255,255,.96);
       backdrop-filter:blur(10px);
       border-bottom:1px solid rgba(217,225,234,.9);
     }
@@ -95,6 +95,7 @@
       display:flex;
       flex-direction:column;
       line-height:1.2;
+      min-width:0;
     }
 
     .brand-text strong{
@@ -106,6 +107,7 @@
     .brand-text span{
       color:var(--muted);
       font-size:12px;
+      white-space:normal;
     }
 
     .nav{
@@ -126,9 +128,9 @@
     .nav a:hover{background:#eef4fa}
 
     .hero{
-      background:linear-gradient(135deg, rgba(11,47,76,.96), rgba(16,63,102,.88));
+      background:linear-gradient(135deg, rgba(11,47,76,.97), rgba(16,63,102,.88));
       color:#fff;
-      padding:72px 0 64px;
+      padding:64px 0 56px;
     }
 
     .hero-grid{
@@ -152,24 +154,24 @@
 
     .hero h1{
       margin:0 0 16px;
-      font-size:clamp(34px,5vw,56px);
+      font-size:clamp(34px,5vw,58px);
       line-height:1.15;
     }
 
     .hero .lead{
-      margin:0 0 18px;
+      margin:0 0 16px;
       font-size:18px;
       color:rgba(255,255,255,.94);
     }
 
     .hero .sub{
-      margin:0 0 24px;
+      margin:0 0 22px;
       font-size:16px;
       color:rgba(255,255,255,.84);
     }
 
     .hero-points{
-      margin:0 0 26px;
+      margin:0 0 24px;
       padding:0;
       list-style:none;
       display:grid;
@@ -222,12 +224,6 @@
     .btn-line{background:var(--green); color:#fff}
     .btn-line:hover{background:var(--green-dark)}
     .btn-primary{background:#fff; color:var(--navy)}
-    .btn-outline{
-      background:transparent;
-      color:#fff;
-      border:1px solid rgba(255,255,255,.24);
-      box-shadow:none;
-    }
 
     .hero-note{
       font-size:13px;
@@ -248,11 +244,11 @@
       object-fit:cover;
     }
 
-    section{padding:72px 0}
+    section{padding:68px 0}
 
     .section-head{
       max-width:760px;
-      margin:0 auto 34px;
+      margin:0 auto 30px;
       text-align:center;
     }
 
@@ -309,27 +305,6 @@
       display:block;
       color:var(--navy);
       margin-bottom:6px;
-    }
-
-    .image-band{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:24px;
-      align-items:center;
-    }
-
-    .image-card{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:22px;
-      overflow:hidden;
-      box-shadow:var(--shadow);
-    }
-
-    .image-card img{
-      width:100%;
-      aspect-ratio:16 / 10;
-      object-fit:cover;
     }
 
     .text-panel{
@@ -431,8 +406,8 @@
 
     .message-grid{
       display:grid;
-      grid-template-columns:320px 1fr;
-      gap:26px;
+      grid-template-columns:220px 1fr;
+      gap:24px;
       align-items:start;
     }
 
@@ -549,11 +524,19 @@
       .hero-grid,
       .cards-3,
       .cards-2,
-      .image-band,
       .price-grid,
       .message-grid,
       .faq-grid{
         grid-template-columns:1fr;
+      }
+
+      .message-grid{
+        gap:18px;
+      }
+
+      .message-photo{
+        max-width:180px;
+        margin:0 auto;
       }
 
       .header-inner{
@@ -569,7 +552,7 @@
     }
 
     @media (max-width: 640px){
-      section{padding:56px 0}
+      section{padding:52px 0}
       .cta-row{flex-direction:column}
       .btn{width:100%}
       .brand-logo{width:48px;height:48px}
@@ -655,21 +638,31 @@
     </section>
 
     <section id="service">
-      <div class="container image-band">
-        <div class="image-card">
-          <img src="0D5B1F59-E1A6-40F6-A740-8A16EF5DC07B.jpeg" alt="営業支援イメージ">
+      <div class="container">
+        <div class="section-head">
+          <h2>対応内容</h2>
+          <p>単なるアポ取得ではなく、受注まで見据えた営業支援を行います。</p>
         </div>
-        <div class="text-panel">
-          <h3>対応内容</h3>
-          <ul class="check-list">
-            <li>営業戦略設計</li>
-            <li>新規開拓支援</li>
-            <li>商談支援</li>
-            <li>クロージング支援</li>
-          </ul>
-          <p style="margin-top:14px;color:var(--muted);">
-            単なるアポ取得ではなく、受注まで見据えた営業支援を行います。
-          </p>
+
+        <div class="cards-2">
+          <div class="text-panel">
+            <h3>実行だけでなく、設計から支援します</h3>
+            <ul class="check-list">
+              <li>営業戦略設計</li>
+              <li>新規開拓支援</li>
+              <li>商談支援</li>
+              <li>クロージング支援</li>
+            </ul>
+          </div>
+
+          <div class="text-panel">
+            <h3>このような企業様におすすめです</h3>
+            <ul class="check-list">
+              <li>営業専任担当がいない、または不足している</li>
+              <li>新規開拓を強化したいBtoB企業</li>
+              <li>商談はあるが受注率に課題がある</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -724,25 +717,6 @@
               <li>長期的に売上を伸ばしたい</li>
             </ul>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container image-band">
-        <div class="text-panel">
-          <h3>相談しやすさも重視しています</h3>
-          <p style="margin:0 0 12px;color:var(--muted);">
-            まだ依頼するか決まっていない段階でも問題ありません。まずは現状整理だけでも歓迎です。
-          </p>
-          <ul class="check-list">
-            <li>無理な営業は一切ありません</li>
-            <li>相場感の確認だけでも可能です</li>
-            <li>現状の課題整理から対応します</li>
-          </ul>
-        </div>
-        <div class="image-card">
-          <img src="0D5B1F59-E1A6-40F6-A740-8A16EF5DC07B.jpeg" alt="相談イメージ">
         </div>
       </div>
     </section>
@@ -823,12 +797,6 @@
                onclick="trackPhoneClick('電話相談ボタン')">
               電話で相談する
             </a>
-
-            <a class="btn btn-outline"
-               href="mailto:em.planning801@gmail.com?subject=【無料相談】営業支援について"
-               onclick="trackMailClick('メール相談ボタン')">
-              メールで相談する
-            </a>
           </div>
 
           <div class="contact-note">
@@ -854,7 +822,6 @@
           transport_type: 'beacon'
         });
       } catch (e) {}
-
       setTimeout(function() {
         window.open(url, '_blank');
       }, 200);
@@ -864,16 +831,6 @@
       try {
         gtag('event', 'phone_click', {
           event_category: '電話',
-          event_label: label,
-          transport_type: 'beacon'
-        });
-      } catch (e) {}
-    }
-
-    function trackMailClick(label) {
-      try {
-        gtag('event', 'mail_click', {
-          event_category: 'メール',
           event_label: label,
           transport_type: 'beacon'
         });
