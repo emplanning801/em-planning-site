@@ -5,3 +5,22 @@
 .footer{background:#071f34;color:#bac8d3;padding:58px 0 25px}.footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}.footer-brand{color:#fff;font-size:21px;font-weight:900}.footer-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.footer-nav a{font-size:12px;font-weight:700}.footer-meta{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:20px;display:flex;justify-content:space-between;font-size:11px}.floating{position:fixed;right:20px;bottom:20px;z-index:90;background:var(--orange);color:#fff;padding:14px 19px;border-radius:4px;font-size:13px;font-weight:900;box-shadow:0 10px 35px rgba(9,45,76,.25)}
 @media(max-width:900px){.nav{display:none;position:absolute;left:0;right:0;top:81px;padding:20px;background:#fff;flex-direction:column;align-items:stretch}.nav.open{display:flex}.menu{display:block}.hero-grid,.difference,.message-grid,.section-head{grid-template-columns:1fr}.hero-panel{border-left:0;border-top:1px solid rgba(255,255,255,.2);padding:28px 0 0}.service-grid{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}.cta-block{display:block;padding:38px}.cta-actions{margin-top:25px}.footer-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}}
 @media(max-width:560px){.container{width:min(100% - 28px,var(--max))}.header-inner{height:72px}.brand img{width:48px;height:40px}.brand-name{font-size:15px}.brand-tag{font-size:8px}.nav{top:71px}.hero{padding:68px 0}.hero h1{font-size:35px}.section{padding:66px 0}.service-card{padding:27px}.process{grid-template-columns:1fr}.message-grid{gap:28px}.message-grid img{max-height:400px}.btn{width:100%}.footer-nav{grid-template-columns:1fr 1fr}.footer-meta{display:block}.floating{left:14px;right:14px;text-align:center}.company-table th{width:105px;padding-left:0}.company-table td{padding-right:0}}
+
+/* Editorial photography — licensed free-use imagery used as visual context only. */
+.hero{background-image:linear-gradient(90deg,rgba(6,31,52,.98) 0%,rgba(9,45,76,.92) 48%,rgba(9,45,76,.48) 100%),url("assets/strategy-meeting.jpg");background-size:cover;background-position:center}
+.hero-panel{background:rgba(5,31,51,.48);padding:34px;border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(5px)}
+.service-card{overflow:hidden;padding-top:238px;min-height:465px}
+.service-card:before{content:"";position:absolute;left:0;right:0;top:0;height:200px;background-position:center;background-size:cover;transition:transform .45s ease}
+.service-card:hover:before{transform:scale(1.035)}
+.service-card:nth-child(1):before{background-image:linear-gradient(rgba(9,45,76,.05),rgba(9,45,76,.3)),url("assets/strategy-meeting.jpg")}
+.service-card:nth-child(2):before{background-image:linear-gradient(rgba(9,45,76,.08),rgba(9,45,76,.35)),url("assets/team-workshop.jpg")}
+.service-card:nth-child(3):before{background-image:linear-gradient(rgba(9,45,76,.08),rgba(9,45,76,.35)),url("assets/team-workshop.jpg");background-position:center 35%}
+.service-card:nth-child(4):before{background-image:linear-gradient(rgba(9,45,76,.05),rgba(9,45,76,.25)),url("assets/logistics-hub.jpg");background-position:center 48%}
+.page-hero{position:relative;overflow:hidden;background-image:linear-gradient(90deg,rgba(6,31,52,.98),rgba(9,45,76,.72)),url("assets/strategy-meeting.jpg");background-size:cover;background-position:center 45%}
+.page-hero:after{content:"";position:absolute;right:7%;top:0;width:1px;height:100%;background:rgba(255,255,255,.2)}
+.page-hero .container{position:relative;z-index:1}
+.difference-visual{position:relative;overflow:hidden;min-height:430px;display:flex;flex-direction:column;justify-content:flex-end;background-image:linear-gradient(0deg,rgba(6,31,52,.95),rgba(9,45,76,.28)),url("assets/team-workshop.jpg");background-size:cover;background-position:center}
+.difference-visual .kicker,.difference-visual .big{position:relative;z-index:1}
+.section-pale{background-image:linear-gradient(rgba(243,247,250,.96),rgba(243,247,250,.96)),radial-gradient(circle at 15% 20%,var(--orange),transparent 26%)}
+@media(max-width:900px){.hero{background-position:65% center}.service-card{min-height:430px}.difference-visual{min-height:370px}}
+@media(max-width:560px){.service-card{padding-top:220px}.service-card:before{height:185px}.hero-panel{padding:25px}.difference-visual{min-height:360px;padding:28px}}
