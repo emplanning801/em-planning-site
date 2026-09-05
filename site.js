@@ -1,5 +1,3 @@
-document.querySelector('.menu')?.addEventListener('click',e=>{const n=document.querySelector('.nav');const o=n.classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',o);e.currentTarget.textContent=o?'×':'☰'});document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.nav')?.classList.remove('open')));const header=document.querySelector('.site-header');const progress=()=>{const d=document.documentElement;const max=d.scrollHeight-d.clientHeight;header?.style.setProperty('--scroll-progress',max?`${Math.min(100,d.scrollTop/max*100)}%`:'0%')};addEventListener('scroll',progress,{passive:true});progress();const targets=document.querySelectorAll('.section-head,.service-card,.difference-visual,.difference-body,.step,.message-grid,.voice-card,.pricing-card,.article-card,.seo-grid article');targets.forEach(el=>el.dataset.reveal='');if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.08});targets.forEach(el=>observer.observe(el))}else targets.forEach(el=>el.classList.add('is-visible'));
-
 if(!document.querySelector('.footer')){
   const base=location.pathname.includes('/blog/')?'../':'';
   const footer=document.createElement('footer');
@@ -36,6 +34,56 @@ document.querySelectorAll('.footer-nav').forEach(nav=>{
   nav.innerHTML=[...navItems.slice(0,-1),['contact.html','CONTACT'],['privacy.html','PRIVACY']]
     .map(([href,label])=>`<a href="${base}${href}">${label}</a>`).join('');
 });
+
+// Make the global navigation work consistently on touch devices and article pages.
+document.querySelectorAll('.site-header').forEach(siteHeader=>{
+  const nav=siteHeader.querySelector('.nav');
+  if(!nav)return;
+  let menu=siteHeader.querySelector('.menu');
+  if(!menu){
+    menu=document.createElement('button');
+    menu.className='menu';
+    menu.type='button';
+    menu.textContent='☰';
+    siteHeader.querySelector('.header-inner')?.insertBefore(menu,nav);
+  }
+  const navId=nav.id||'primary-navigation';
+  nav.id=navId;
+  menu.setAttribute('aria-controls',navId);
+  menu.setAttribute('aria-expanded','false');
+  menu.setAttribute('aria-label','メニューを開く');
+
+  const closeMenu=()=>{
+    nav.classList.remove('open');
+    document.body.classList.remove('nav-open');
+    menu.setAttribute('aria-expanded','false');
+    menu.setAttribute('aria-label','メニューを開く');
+    menu.textContent='☰';
+  };
+  menu.addEventListener('click',()=>{
+    const open=!nav.classList.contains('open');
+    nav.classList.toggle('open',open);
+    document.body.classList.toggle('nav-open',open);
+    menu.setAttribute('aria-expanded',String(open));
+    menu.setAttribute('aria-label',open?'メニューを閉じる':'メニューを開く');
+    menu.textContent=open?'×':'☰';
+  });
+  nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
+  addEventListener('resize',()=>{if(innerWidth>900)closeMenu()},{passive:true});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu()});
+});
+
+const header=document.querySelector('.site-header');
+const progress=()=>{const d=document.documentElement;const max=d.scrollHeight-d.clientHeight;header?.style.setProperty('--scroll-progress',max?`${Math.min(100,d.scrollTop/max*100)}%`:'0%')};
+addEventListener('scroll',progress,{passive:true});
+progress();
+
+const targets=document.querySelectorAll('.section-head,.service-card,.difference-visual,.difference-body,.step,.message-grid,.voice-card,.pricing-card,.article-card,.seo-grid article');
+targets.forEach(el=>el.dataset.reveal='');
+if('IntersectionObserver'in window){
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.08});
+  targets.forEach(el=>observer.observe(el));
+}else targets.forEach(el=>el.classList.add('is-visible'));
 
 // Supply a canonical URL on legacy pages that do not yet declare one.
 if(!document.querySelector('link[rel="canonical"]')){
