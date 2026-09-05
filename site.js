@@ -15,3 +15,32 @@ if(footerBrand&&!footerBrand.querySelector('.social-block')){
   social.innerHTML='<span class="social-label">OFFICIAL SOCIAL</span><div class="social-links"><a class="social-link social-instagram" href="https://www.instagram.com/em_planning801/" target="_blank" rel="noopener noreferrer" aria-label="EM PLANNING公式Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg><span>Instagram</span></a><a class="social-link social-facebook" href="https://www.facebook.com/em.planning801/" target="_blank" rel="noopener noreferrer" aria-label="EM PLANNING公式Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v2H6v4h3v7h4v-7h3.5l.5-4h-4V9c0-.7.3-1 1-1Z"></path></svg><span>Facebook</span></a><a class="social-link social-x" href="https://x.com/em_planning801" target="_blank" rel="noopener noreferrer" aria-label="EM PLANNING公式X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4l14 16M19 4L5 20"></path></svg><span>X</span></a></div>';
   footerBrand.appendChild(social);
 }
+
+// Keep the primary navigation consistent on every page, including blog articles.
+const path=location.pathname;
+const base=path.includes('/blog/')?'../':'';
+const current=path.split('/').pop()||'index.html';
+const navItems=[
+  ['index.html','HOME'],['service.html','SERVICE'],['solutions.html','SOLUTIONS'],
+  ['price.html','PRICE'],['about.html','ABOUT'],['company.html','COMPANY'],
+  ['blog.html','BLOG'],['contact.html','CONTACT']
+];
+document.querySelectorAll('.nav').forEach(nav=>{
+  nav.innerHTML=navItems.map(([href,label])=>{
+    const active=(current===href)||(current==='sales-support.html'&&href==='service.html')||(path.includes('/blog/')&&href==='blog.html');
+    const classes=href==='contact.html'?' class="nav-cta"':'';
+    return `<a${classes}${active?' aria-current="page"':''} href="${base}${href}">${label}</a>`;
+  }).join('');
+});
+document.querySelectorAll('.footer-nav').forEach(nav=>{
+  nav.innerHTML=[...navItems.slice(0,-1),['contact.html','CONTACT'],['privacy.html','PRIVACY']]
+    .map(([href,label])=>`<a href="${base}${href}">${label}</a>`).join('');
+});
+
+// Supply a canonical URL on legacy pages that do not yet declare one.
+if(!document.querySelector('link[rel="canonical"]')){
+  const canonical=document.createElement('link');
+  canonical.rel='canonical';
+  canonical.href=`https://emplanning801.github.io/em-planning-site/${path.split('/em-planning-site/')[1]||''}`;
+  document.head.appendChild(canonical);
+}
