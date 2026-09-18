@@ -19,9 +19,9 @@ const path=location.pathname;
 const base=path.includes('/blog/')?'../':'';
 const current=path.split('/').pop()||'index.html';
 const navItems=[
-  ['index.html','HOME'],['service.html','SERVICE'],['solutions.html','SOLUTIONS'],
-  ['price.html','PRICE'],['about.html','ABOUT'],['company.html','COMPANY'],
-  ['blog.html','BLOG'],['contact.html','CONTACT']
+  ['index.html','ホーム'],['service.html','事業内容'],['solutions.html','課題別の支援'],
+  ['price.html','料金'],['about.html','私たちの考え'],['company.html','会社概要'],
+  ['blog.html','コラム'],['contact.html','無料相談']
 ];
 document.querySelectorAll('.nav').forEach(nav=>{
   nav.innerHTML=navItems.map(([href,label])=>{
@@ -31,7 +31,7 @@ document.querySelectorAll('.nav').forEach(nav=>{
   }).join('');
 });
 document.querySelectorAll('.footer-nav').forEach(nav=>{
-  nav.innerHTML=[...navItems.slice(0,-1),['contact.html','CONTACT'],['privacy.html','PRIVACY']]
+  nav.innerHTML=[...navItems.slice(0,-1),['contact.html','お問い合わせ'],['privacy.html','個人情報保護方針']]
     .map(([href,label])=>`<a href="${base}${href}">${label}</a>`).join('');
 });
 
