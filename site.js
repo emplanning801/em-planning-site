@@ -89,6 +89,6 @@ if('IntersectionObserver'in window){
 if(!document.querySelector('link[rel="canonical"]')){
   const canonical=document.createElement('link');
   canonical.rel='canonical';
-  canonical.href=`https://emplanning801.github.io/em-planning-site/${path.split('/em-planning-site/')[1]||''}`;
+  canonical.href=`https://em-planning.co.jp${path}`;
   document.head.appendChild(canonical);
 }
