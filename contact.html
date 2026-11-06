@@ -15,6 +15,8 @@
 <link rel="icon" href="logo-primary.jpg.JPG">
 <link rel="canonical" href="https://em-planning.co.jp/contact.html">
 <link rel="stylesheet" href="upgrade-20260918.css?v=20261024-1">
+<link rel="stylesheet" href="contact-form.css?v=20261106-1">
+<script defer src="contact-form.js?v=20261106-1"></script>
 </head>
 <body class="page-contact">
 <header class="site-header">
@@ -56,6 +58,32 @@
 </div>
 </div>
 <div class="contact-grid">
+<section class="inquiry-panel" aria-labelledby="inquiry-heading">
+<p class="section-label">CONTACT FORM</p>
+<h2 id="inquiry-heading">このページから、そのまま相談できます。</h2>
+<p>メールアプリは不要です。必須項目をご入力のうえ、内容をご確認ください。</p>
+<form id="inquiry-form" action="https://formspree.io/f/mbggbbpw" method="POST">
+<input type="hidden" name="_subject" value="【HPお問い合わせ】EM PLANNING">
+<div id="inquiry-fields">
+<div class="inquiry-row">
+<div><label for="inquiry-name">お名前 <span class="required-label">必須</span></label><input id="inquiry-name" name="name" autocomplete="name" required maxlength="100"></div>
+<div><label for="inquiry-company">会社名 <span class="optional-label">任意</span></label><input id="inquiry-company" name="company" autocomplete="organization" maxlength="150"></div>
+</div>
+<label for="inquiry-email">メールアドレス <span class="required-label">必須</span></label><input id="inquiry-email" name="email" type="email" autocomplete="email" required maxlength="254" aria-describedby="inquiry-email-help"><p id="inquiry-email-help" class="inquiry-help">ご返信先のメールアドレスを入力してください。</p>
+<label for="inquiry-phone">電話番号 <span class="optional-label">任意</span></label><input id="inquiry-phone" name="phone" type="tel" autocomplete="tel" maxlength="30">
+<label for="inquiry-topic">ご相談の種類 <span class="required-label">必須</span></label><select id="inquiry-topic" name="topic" required><option value="">選択してください</option><option>営業支援・営業代行</option><option>営業戦略・案件管理</option><option>営業チーム・組織づくり</option><option>その他・まだ決まっていない</option></select>
+<label for="inquiry-message">ご相談内容 <span class="required-label">必須</span></label><textarea id="inquiry-message" name="message" rows="7" required maxlength="5000" aria-describedby="inquiry-message-help" placeholder="現在困っていることや、相談したいことをお書きください。"></textarea><p id="inquiry-message-help" class="inquiry-help">5,000文字以内。顧客の個人情報や機密情報は入力しないでください。</p>
+<p class="inquiry-help">送信にはFormspreeを利用します。入力内容は同サービスを通じて当社へ届き、米国等の国外で処理・保管される場合があります。詳しくは<a href="privacy.html#contact-form-privacy" target="_blank" rel="noopener">個人情報の取り扱い（別タブ）</a>をご確認ください。</p>
+<label class="inquiry-consent"><input type="checkbox" name="consent" value="個人情報の取り扱い・Formspree経由の送信に同意" required><span>個人情報の取り扱いと上記の送信方法を確認し、同意します。<span class="required-label">必須</span></span></label>
+<button id="review-button" class="inquiry-primary" type="button" hidden>入力内容を確認する</button>
+<noscript><p>入力内容をご確認のうえ、送信してください。送信後はFormspreeの受付画面へ移動します。</p><button class="inquiry-primary" type="submit">この内容で送信する</button></noscript>
+</div>
+<section id="inquiry-review" hidden aria-labelledby="review-title"><h3 id="review-title" tabindex="-1">入力内容の確認</h3><p>特にメールアドレスにお間違いがないかご確認ください。</p><dl id="review-content"></dl><div class="inquiry-actions"><button id="edit-button" class="inquiry-secondary" type="button">入力内容を修正する</button><button id="send-button" class="inquiry-primary" type="submit">この内容で送信する</button></div></section>
+<p id="inquiry-status" role="status" aria-live="polite"></p><p id="inquiry-error" role="alert" hidden></p>
+</form>
+<section id="inquiry-success" hidden aria-labelledby="success-title"><h3 id="success-title" tabindex="-1">お問い合わせを受け付けました。</h3><p>ご相談ありがとうございます。内容を確認のうえ、入力いただいたメールアドレスへご連絡いたします。</p><p>自動返信メールは送信されません。返信が届かない場合やお急ぎの場合は、下記の電話・メールからご連絡ください。</p></section>
+<p class="inquiry-help">フォームが使えない場合は、<a href="mailto:s.mori@em-planning.co.jp">s.mori@em-planning.co.jp</a> または <a href="tel:07012696477">070-1269-6477</a> へご連絡ください。</p>
+</section>
 <section class="contact-first" aria-labelledby="contact-first-title">
 <h2 id="contact-first-title">ご都合のよい方法で、ご連絡ください。</h2>
 <p>まずは「営業について相談したい」のひと言から。詳細な資料は不要です。</p>
@@ -89,9 +117,9 @@
 <strong>046-874-7258</strong>
 <p>お電話でのお問い合わせ</p>
 </a>
-<a class="contact-card" href="tel:08055347560">
+<a class="contact-card" href="tel:07012696477">
 <span class="label">MOBILE</span>
-<strong>080-5534-7560</strong>
+<strong>070-1269-6477</strong>
 <p>担当者直通</p>
 </a>
 <a class="contact-card" href="https://www.instagram.com/em_planning801/" target="_blank" rel="noopener noreferrer">
