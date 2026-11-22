@@ -31,7 +31,7 @@ document.querySelectorAll('.nav').forEach(nav=>{
   }).join('');
 });
 document.querySelectorAll('.footer-nav').forEach(nav=>{
-  nav.innerHTML=[...navItems.slice(0,-1),['contact.html','お問い合わせ'],['privacy.html','個人情報保護方針']]
+  nav.innerHTML=[...navItems.slice(0,-1),['sales-guide.html','営業支援ガイド'],['contact.html','お問い合わせ'],['privacy.html','個人情報保護方針']]
     .map(([href,label])=>`<a href="${base}${href}">${label}</a>`).join('');
 });
 
